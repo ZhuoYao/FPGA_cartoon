@@ -1,0 +1,2017 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: sdram_ov5640_lcd.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "sdram_ov5640_lcd.prj"
+Verilog Include Directory          : {D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/lcd_ip D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip}
+
+---- Target Parameters
+Target Device                      : xc6slx9ftg256-2
+Output File Name                   : "sdram_ov5640_lcd.ngc"
+
+---- Source Options
+Top Module Name                    : sdram_ov5640_lcd
+
+---- Target Options
+LUT Combining                      : auto
+Add Generic Clock Buffer(BUFG)     : 16
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+
+---- Other Options
+Cores Search Directories           : {d:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/ipcore_dir d:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/ip/fifo_generator_v9_3_0 d:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/ip/fifo_generator_v9_3_1}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "d:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/ipcore_dir/wrfifo.v" into library work
+Parsing module <wrfifo>.
+Analyzing Verilog file "d:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/ipcore_dir/rdfifo.v" into library work
+Parsing module <rdfifo>.
+Analyzing Verilog file "d:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/ipcore_dir/sdram_pll.v" into library work
+Parsing module <sdram_pll>.
+Analyzing Verilog file "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip/sdram_wr_data.v" into library work
+Parsing module <sdram_wr_data>.
+Parsing verilog file "D:\Projects\FPGA\cartoon\26_sdram_ov5640_lcd\sdram_ov5640_lcd\rtl\sdram_vga_ip\sdram_ip\/sdram_para.v" included at line 25.
+WARNING:HDLCompiler:1142 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip/sdram_wr_data.v" Line 1: Compiler directive `timescale is not allowed here
+Analyzing Verilog file "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip/sdram_ctrl.v" into library work
+Parsing module <sdram_ctrl>.
+Parsing verilog file "D:\Projects\FPGA\cartoon\26_sdram_ov5640_lcd\sdram_ov5640_lcd\rtl\sdram_vga_ip\sdram_ip\/sdram_para.v" included at line 49.
+WARNING:HDLCompiler:1142 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip/sdram_ctrl.v" Line 1: Compiler directive `timescale is not allowed here
+Analyzing Verilog file "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip/sdram_cmd.v" into library work
+Parsing module <sdram_cmd>.
+Parsing verilog file "D:\Projects\FPGA\cartoon\26_sdram_ov5640_lcd\sdram_ov5640_lcd\rtl\sdram_vga_ip\sdram_ip\/sdram_para.v" included at line 38.
+WARNING:HDLCompiler:1142 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip/sdram_cmd.v" Line 1: Compiler directive `timescale is not allowed here
+Analyzing Verilog file "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip/sdram_top.v" into library work
+Parsing module <sdram_top>.
+Analyzing Verilog file "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip/dcfifo_ctrl.v" into library work
+Parsing module <dcfifo_ctrl>.
+Analyzing Verilog file "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/lcd_ip/lcd_driver.v" into library work
+Parsing module <lcd_driver>.
+Parsing verilog file "D:\Projects\FPGA\cartoon\26_sdram_ov5640_lcd\sdram_ov5640_lcd\rtl\sdram_vga_ip\lcd_ip\/lcd_para.v" included at line 27.
+Analyzing Verilog file "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip/sdram_2fifo_top.v" into library work
+Parsing module <sdram_2fifo_top>.
+WARNING:HDLCompiler:751 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip/sdram_2fifo_top.v" Line 68: Redeclaration of ansi port sdram_wr_req is not allowed
+WARNING:HDLCompiler:751 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip/sdram_2fifo_top.v" Line 70: Redeclaration of ansi port sdram_rd_req is not allowed
+Analyzing Verilog file "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip/sdbank_switch.v" into library work
+Parsing module <sdbank_switch>.
+Analyzing Verilog file "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/lcd_ip/lcd_top.v" into library work
+Parsing module <lcd_top>.
+Analyzing Verilog file "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/cmos_i2c_ov5640/i2c_com.v" into library work
+Parsing module <i2c_com>.
+Analyzing Verilog file "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/system_ctrl.v" into library work
+Parsing module <system_ctrl>.
+Analyzing Verilog file "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_vga_top.v" into library work
+Parsing module <sdram_vga_top>.
+Analyzing Verilog file "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/cmos_i2c_ov5640/reg_config.v" into library work
+Parsing module <reg_config>.
+Analyzing Verilog file "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/cmos_i2c_ov5640/power_on_delay.v" into library work
+Parsing module <power_on_delay>.
+Analyzing Verilog file "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/cmos_i2c_ov5640/CMOS_Capture.v" into library work
+Parsing module <CMOS_Capture>.
+Analyzing Verilog file "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_ov5640_lcd.v" into library work
+Parsing module <sdram_ov5640_lcd>.
+Analyzing Verilog file "d:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/ip/fifo_generator_v9_3_0/fifo.v" into library work
+Parsing module <fifo>.
+Analyzing Verilog file "d:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/ip/fifo_generator_v9_3_1/fifo_display.v" into library work
+Parsing module <fifo_display>.
+Parsing VHDL file "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/imports/formal/cartoon_top.vhd" into library work
+Parsing entity <cartoon_top>.
+Parsing architecture <behavioral> of entity <cartoon_top>.
+Parsing VHDL file "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/imports/formal/cartoon.vhd" into library work
+Parsing entity <cartoon>.
+Parsing architecture <behavioral> of entity <cartoon>.
+Parsing VHDL file "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/imports/formal/fifo_counter.vhd" into library work
+Parsing entity <fifo_counter>.
+Parsing architecture <behavioral> of entity <fifo_counter>.
+Parsing VHDL file "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/imports/formal/shift_register.vhd" into library work
+Parsing entity <sr5>.
+Parsing architecture <behavioral> of entity <sr5>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <sdram_ov5640_lcd>.
+Going to vhdl side to elaborate module cartoon_top
+
+Elaborating entity <cartoon_top> (architecture <behavioral>) from library <work>.
+Going to verilog side to elaborate module fifo_display
+
+Elaborating module <fifo_display>.
+WARNING:HDLCompiler:1499 - "d:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/ip/fifo_generator_v9_3_1/fifo_display.v" Line 39: Empty module <fifo_display> remains a black box.
+Back to vhdl to continue elaboration
+
+Elaborating entity <cartoon> (architecture <behavioral>) from library <work>.
+Going to verilog side to elaborate module fifo
+
+Elaborating module <fifo>.
+WARNING:HDLCompiler:1499 - "d:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/ip/fifo_generator_v9_3_0/fifo.v" Line 39: Empty module <fifo> remains a black box.
+Back to vhdl to continue elaboration
+Going to verilog side to elaborate module fifo
+Back to vhdl to continue elaboration
+Going to verilog side to elaborate module fifo
+Back to vhdl to continue elaboration
+Going to verilog side to elaborate module fifo
+Back to vhdl to continue elaboration
+
+Elaborating entity <sr5> (architecture <behavioral>) from library <work>.
+
+Elaborating entity <fifo_counter> (architecture <behavioral>) from library <work>.
+Back to verilog to continue elaboration
+
+Elaborating module <system_ctrl>.
+
+Elaborating module <sdram_pll>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <PLL_BASE(BANDWIDTH="OPTIMIZED",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="SYSTEM_SYNCHRONOUS",DIVCLK_DIVIDE=1,CLKFBOUT_MULT=12,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=25,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DIVIDE=6,CLKOUT1_PHASE=0.0,CLKOUT1_DUTY_CYCLE=0.5,CLKOUT2_DIVIDE=6,CLKOUT2_PHASE=0.0,CLKOUT2_DUTY_CYCLE=0.5,CLKOUT3_DIVIDE=67,CLKOUT3_PHASE=0.0,CLKOUT3_DUTY_CYCLE=0.5,CLKOUT4_DIVIDE=22,CLKOUT4_PHASE=0.0,CLKOUT4_DUTY_CYCLE=0.5,CLKIN_PERIOD=20.0,REF_JITTER=0.01)>.
+WARNING:HDLCompiler:1127 - "d:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/ipcore_dir/sdram_pll.v" Line 136: Assignment to clkout5_unused ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+
+Elaborating module <ODDR2(DDR_ALIGNMENT="NONE",INIT=1'b0,SRTYPE="SYNC")>.
+
+Elaborating module <power_on_delay>.
+
+Elaborating module <reg_config>.
+
+Elaborating module <i2c_com>.
+WARNING:HDLCompiler:413 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/cmos_i2c_ov5640/i2c_com.v" Line 30: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/cmos_i2c_ov5640/i2c_com.v" Line 31: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/cmos_i2c_ov5640/i2c_com.v" Line 43: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:1127 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/cmos_i2c_ov5640/reg_config.v" Line 30: Assignment to ack ignored, since the identifier is never used
+
+Elaborating module <CMOS_Capture>.
+
+Elaborating module <sdram_vga_top>.
+
+Elaborating module <sdram_2fifo_top>.
+
+Elaborating module <sdram_top>.
+
+Elaborating module <sdram_ctrl>.
+
+Elaborating module <sdram_cmd>.
+
+Elaborating module <sdram_wr_data>.
+
+Elaborating module <dcfifo_ctrl>.
+
+Elaborating module <wrfifo>.
+WARNING:HDLCompiler:1499 - "d:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/ipcore_dir/wrfifo.v" Line 39: Empty module <wrfifo> remains a black box.
+
+Elaborating module <rdfifo>.
+WARNING:HDLCompiler:1499 - "d:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/ipcore_dir/rdfifo.v" Line 39: Empty module <rdfifo> remains a black box.
+WARNING:HDLCompiler:1127 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_vga_top.v" Line 75: Assignment to sdram_wr_req ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_vga_top.v" Line 76: Assignment to sdram_rd_req ignored, since the identifier is never used
+
+Elaborating module <sdbank_switch>.
+WARNING:HDLCompiler:1127 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_vga_top.v" Line 137: Assignment to state_write ignored, since the identifier is never used
+
+Elaborating module <lcd_top>.
+
+Elaborating module <lcd_driver>.
+WARNING:HDLCompiler:189 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_ov5640_lcd.v" Line 194: Size mismatch in connection of port <sdram_addr>. Formal port size is 12-bit while actual signal size is 13-bit.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <sdram_ov5640_lcd>.
+    Related source file is "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_ov5640_lcd.v".
+WARNING:Xst:647 - Input <key_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_ov5640_lcd.v" line 132: Output port <reg_index> of the instance <reg_config_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_ov5640_lcd.v" line 132: Output port <strobe_flash> of the instance <reg_config_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_ov5640_lcd.v" line 132: Output port <clock_20k> of the instance <reg_config_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_ov5640_lcd.v" line 150: Output port <CMOS_FPS_DATA> of the instance <u_CMOS_Capture> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_ov5640_lcd.v" line 176: Output port <lcd_sync> of the instance <u_sdram_vga_top> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <sdram_ov5640_lcd> synthesized.
+
+Synthesizing Unit <cartoon_top>.
+    Related source file is "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/imports/formal/cartoon_top.vhd".
+WARNING:Xst:647 - Input <clk_mux> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/imports/formal/cartoon_top.vhd" line 54: Output port <full> of the instance <d1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/imports/formal/cartoon_top.vhd" line 54: Output port <empty> of the instance <d1> is unconnected or connected to loadless signal.
+    Register <enable> equivalent to <wr_en> has been removed
+    Found 8-bit register for signal <G_t>.
+    Found 8-bit register for signal <B_t>.
+    Found 1-bit register for signal <wr_en>.
+    Found 1-bit register for signal <rd_en>.
+    Found 24-bit register for signal <RGB1>.
+    Found 8-bit register for signal <R_t>.
+    Found 11-bit comparator greater for signal <display_x[10]_GND_6_o_LessThan_1_o> created at line 66
+    Found 11-bit comparator greater for signal <display_x[10]_GND_6_o_LessThan_2_o> created at line 73
+    Found 11-bit comparator greater for signal <display_x[10]_GND_6_o_LessThan_3_o> created at line 87
+    Summary:
+	inferred  50 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred   6 Multiplexer(s).
+Unit <cartoon_top> synthesized.
+
+Synthesizing Unit <cartoon>.
+    Related source file is "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/imports/formal/cartoon.vhd".
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/imports/formal/cartoon.vhd" line 63: Output port <full> of the instance <fifo0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/imports/formal/cartoon.vhd" line 63: Output port <empty> of the instance <fifo0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/imports/formal/cartoon.vhd" line 64: Output port <full> of the instance <fifo1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/imports/formal/cartoon.vhd" line 64: Output port <empty> of the instance <fifo1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/imports/formal/cartoon.vhd" line 65: Output port <full> of the instance <fifo2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/imports/formal/cartoon.vhd" line 65: Output port <empty> of the instance <fifo2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/imports/formal/cartoon.vhd" line 66: Output port <full> of the instance <fifo3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/imports/formal/cartoon.vhd" line 66: Output port <empty> of the instance <fifo3> is unconnected or connected to loadless signal.
+    Found 6-bit adder for signal <n0158[5:0]> created at line 79.
+    Found 7-bit adder for signal <n0161[6:0]> created at line 79.
+    Found 8-bit adder for signal <n0164[7:0]> created at line 79.
+    Found 9-bit adder for signal <n0167[8:0]> created at line 79.
+    Found 10-bit adder for signal <n0170[9:0]> created at line 79.
+    Found 11-bit adder for signal <n0173[10:0]> created at line 79.
+    Found 12-bit adder for signal <n0176[11:0]> created at line 79.
+    Found 13-bit adder for signal <n0179[12:0]> created at line 79.
+    Found 14-bit adder for signal <n0182[13:0]> created at line 79.
+    Found 15-bit adder for signal <n0185[14:0]> created at line 79.
+    Found 16-bit adder for signal <n0188[15:0]> created at line 79.
+    Found 17-bit adder for signal <n0191[16:0]> created at line 79.
+    Found 18-bit adder for signal <n0194[17:0]> created at line 79.
+    Found 19-bit adder for signal <n0197[18:0]> created at line 79.
+    Found 20-bit adder for signal <n0200[19:0]> created at line 79.
+    Found 21-bit adder for signal <n0203[20:0]> created at line 79.
+    Found 22-bit adder for signal <n0206[21:0]> created at line 79.
+    Found 23-bit adder for signal <n0209[22:0]> created at line 79.
+    Found 24-bit adder for signal <n0212[23:0]> created at line 79.
+    Found 25-bit adder for signal <n0215[24:0]> created at line 79.
+    Found 26-bit adder for signal <n0218[25:0]> created at line 79.
+    Found 27-bit adder for signal <n0221[26:0]> created at line 79.
+    Found 28-bit adder for signal <n0224[27:0]> created at line 79.
+    Found 29-bit adder for signal <n0227> created at line 79.
+    Found 27-bit adder for signal <n0098> created at line 83.
+    Found 32-bit subtractor for signal <quantify[31]_GND_9_o_sub_28_OUT<31:0>> created at line 81.
+    Found 6x32-bit multiplier for signal <n0097> created at line 83.
+    Found 32-bit comparator greater for signal <quantify[31]_GND_9_o_LessThan_27_o> created at line 81
+    Found 32-bit comparator greater for signal <GND_9_o_quantify[31]_LessThan_30_o> created at line 83
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred  26 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <cartoon> synthesized.
+
+Synthesizing Unit <sr5>.
+    Related source file is "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/imports/formal/shift_register.vhd".
+    Found 5-bit register for signal <o2>.
+    Found 5-bit register for signal <o3>.
+    Found 5-bit register for signal <o4>.
+    Found 5-bit register for signal <o1>.
+    Summary:
+	inferred  20 D-type flip-flop(s).
+Unit <sr5> synthesized.
+
+Synthesizing Unit <fifo_counter>.
+    Related source file is "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/imports/formal/fifo_counter.vhd".
+WARNING:Xst:647 - Input <display_y> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <rd_en>.
+    Found 11-bit register for signal <count>.
+    Found 1-bit register for signal <wr_en>.
+    Found 11-bit adder for signal <count[10]_GND_12_o_add_3_OUT> created at line 30.
+    Found 11-bit comparator greater for signal <count[10]_GND_12_o_LessThan_1_o> created at line 23
+    Found 11-bit comparator greater for signal <display_x[10]_GND_12_o_LessThan_3_o> created at line 27
+    Found 11-bit comparator greater for signal <display_x[10]_GND_12_o_LessThan_8_o> created at line 39
+    Found 11-bit comparator greater for signal <display_x[10]_GND_12_o_LessThan_9_o> created at line 42
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  13 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <fifo_counter> synthesized.
+
+Synthesizing Unit <div_17s_32s>.
+    Related source file is "".
+    Found 17-bit subtractor for signal <a[16]_unary_minus_1_OUT> created at line 0.
+    Found 32-bit subtractor for signal <b[31]_unary_minus_3_OUT> created at line 0.
+    Found 49-bit adder for signal <n1654> created at line 0.
+    Found 49-bit adder for signal <GND_21_o_b[31]_add_5_OUT> created at line 0.
+    Found 48-bit adder for signal <n1658> created at line 0.
+    Found 48-bit adder for signal <GND_21_o_b[31]_add_7_OUT> created at line 0.
+    Found 47-bit adder for signal <n1662> created at line 0.
+    Found 47-bit adder for signal <GND_21_o_b[31]_add_9_OUT> created at line 0.
+    Found 46-bit adder for signal <n1666> created at line 0.
+    Found 46-bit adder for signal <GND_21_o_b[31]_add_11_OUT> created at line 0.
+    Found 45-bit adder for signal <n1670> created at line 0.
+    Found 45-bit adder for signal <GND_21_o_b[31]_add_13_OUT> created at line 0.
+    Found 44-bit adder for signal <n1674> created at line 0.
+    Found 44-bit adder for signal <GND_21_o_b[31]_add_15_OUT> created at line 0.
+    Found 43-bit adder for signal <n1678> created at line 0.
+    Found 43-bit adder for signal <GND_21_o_b[31]_add_17_OUT> created at line 0.
+    Found 42-bit adder for signal <n1682> created at line 0.
+    Found 42-bit adder for signal <GND_21_o_b[31]_add_19_OUT> created at line 0.
+    Found 41-bit adder for signal <n1686> created at line 0.
+    Found 41-bit adder for signal <GND_21_o_b[31]_add_21_OUT> created at line 0.
+    Found 40-bit adder for signal <n1690> created at line 0.
+    Found 40-bit adder for signal <GND_21_o_b[31]_add_23_OUT> created at line 0.
+    Found 39-bit adder for signal <n1694> created at line 0.
+    Found 39-bit adder for signal <GND_21_o_b[31]_add_25_OUT> created at line 0.
+    Found 38-bit adder for signal <n1698> created at line 0.
+    Found 38-bit adder for signal <GND_21_o_b[31]_add_27_OUT> created at line 0.
+    Found 37-bit adder for signal <n1702> created at line 0.
+    Found 37-bit adder for signal <GND_21_o_b[31]_add_29_OUT> created at line 0.
+    Found 36-bit adder for signal <n1706> created at line 0.
+    Found 36-bit adder for signal <GND_21_o_b[31]_add_31_OUT> created at line 0.
+    Found 35-bit adder for signal <n1710> created at line 0.
+    Found 35-bit adder for signal <GND_21_o_b[31]_add_33_OUT> created at line 0.
+    Found 34-bit adder for signal <n1714> created at line 0.
+    Found 34-bit adder for signal <GND_21_o_b[31]_add_35_OUT> created at line 0.
+    Found 33-bit adder for signal <n1718> created at line 0.
+    Found 33-bit adder for signal <GND_21_o_b[31]_add_37_OUT> created at line 0.
+    Found 18-bit adder for signal <GND_21_o_BUS_0001_add_40_OUT[17:0]> created at line 0.
+    Found 49-bit comparator greater for signal <BUS_0001_INV_818_o> created at line 0
+    Found 48-bit comparator greater for signal <BUS_0002_INV_817_o> created at line 0
+    Found 47-bit comparator greater for signal <BUS_0003_INV_816_o> created at line 0
+    Found 46-bit comparator greater for signal <BUS_0004_INV_815_o> created at line 0
+    Found 45-bit comparator greater for signal <BUS_0005_INV_814_o> created at line 0
+    Found 44-bit comparator greater for signal <BUS_0006_INV_813_o> created at line 0
+    Found 43-bit comparator greater for signal <BUS_0007_INV_812_o> created at line 0
+    Found 42-bit comparator greater for signal <BUS_0008_INV_811_o> created at line 0
+    Found 41-bit comparator greater for signal <BUS_0009_INV_810_o> created at line 0
+    Found 40-bit comparator greater for signal <BUS_0010_INV_809_o> created at line 0
+    Found 39-bit comparator greater for signal <BUS_0011_INV_808_o> created at line 0
+    Found 38-bit comparator greater for signal <BUS_0012_INV_807_o> created at line 0
+    Found 37-bit comparator greater for signal <BUS_0013_INV_806_o> created at line 0
+    Found 36-bit comparator greater for signal <BUS_0014_INV_805_o> created at line 0
+    Found 35-bit comparator greater for signal <BUS_0015_INV_804_o> created at line 0
+    Found 34-bit comparator greater for signal <BUS_0016_INV_803_o> created at line 0
+    Found 33-bit comparator greater for signal <BUS_0017_INV_802_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0018_INV_801_o> created at line 0
+    Summary:
+	inferred  37 Adder/Subtractor(s).
+	inferred  18 Comparator(s).
+	inferred 292 Multiplexer(s).
+Unit <div_17s_32s> synthesized.
+
+Synthesizing Unit <system_ctrl>.
+    Related source file is "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/system_ctrl.v".
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/system_ctrl.v" line 44: Output port <LOCKED> of the instance <u_sdram_pll> is unconnected or connected to loadless signal.
+    Found 10-bit register for signal <delay_cnt>.
+    Found 1-bit register for signal <delay_done>.
+    Found 10-bit adder for signal <delay_cnt[9]_GND_25_o_add_1_OUT> created at line 34.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  11 D-type flip-flop(s).
+Unit <system_ctrl> synthesized.
+
+Synthesizing Unit <sdram_pll>.
+    Related source file is "d:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/ipcore_dir/sdram_pll.v".
+    Summary:
+	no macro.
+Unit <sdram_pll> synthesized.
+
+Synthesizing Unit <power_on_delay>.
+    Related source file is "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/cmos_i2c_ov5640/power_on_delay.v".
+    Found 1-bit register for signal <camera_pwnd_reg>.
+    Found 16-bit register for signal <cnt2>.
+    Found 1-bit register for signal <camera_rstn_reg>.
+    Found 20-bit register for signal <cnt3>.
+    Found 1-bit register for signal <initial_en>.
+    Found 16-bit adder for signal <cnt2[15]_GND_31_o_add_7_OUT> created at line 41.
+    Found 20-bit adder for signal <cnt3[19]_GND_31_o_add_14_OUT> created at line 56.
+    Found 16-bit comparator greater for signal <cnt2[15]_PWR_25_o_LessThan_7_o> created at line 40
+    Found 20-bit comparator greater for signal <cnt3[19]_PWR_25_o_LessThan_14_o> created at line 55
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  39 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <power_on_delay> synthesized.
+
+Synthesizing Unit <reg_config>.
+    Related source file is "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/cmos_i2c_ov5640/reg_config.v".
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/cmos_i2c_ov5640/reg_config.v" line 28: Output port <ack> of the instance <u1> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <key_on>.
+    Found 1-bit register for signal <key_off>.
+    Found 1-bit register for signal <start>.
+    Found 1-bit register for signal <reg_conf_done_reg>.
+    Found 1-bit register for signal <strobe_flash>.
+    Found 1-bit register for signal <clock_20k>.
+    Found 16-bit register for signal <clock_20k_cnt>.
+    Found 16-bit register for signal <on_counter>.
+    Found 16-bit register for signal <off_counter>.
+    Found 2-bit register for signal <config_step>.
+    Found 9-bit register for signal <reg_index>.
+    Found 32-bit register for signal <i2c_data>.
+    Found finite state machine <FSM_0> for signal <config_step>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 19                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clock_20k (rising_edge)                        |
+    | Reset              | camera_rstn (negative)                         |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit adder for signal <clock_20k_cnt[15]_GND_32_o_add_1_OUT> created at line 46.
+    Found 16-bit adder for signal <on_counter[15]_GND_32_o_add_7_OUT> created at line 65.
+    Found 16-bit adder for signal <off_counter[15]_GND_32_o_add_14_OUT> created at line 75.
+    Found 9-bit adder for signal <reg_index[8]_GND_32_o_add_23_OUT> created at line 111.
+    Found 256x32-bit Read Only RAM for signal <_n0911>
+    Found 16-bit comparator greater for signal <clock_20k_cnt[15]_GND_32_o_LessThan_1_o> created at line 45
+    Found 16-bit comparator lessequal for signal <n0010> created at line 64
+    Found 16-bit comparator lessequal for signal <n0017> created at line 74
+    Found 9-bit comparator greater for signal <reg_index[8]_GND_32_o_LessThan_22_o> created at line 97
+    Summary:
+	inferred   1 RAM(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred  95 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred  10 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <reg_config> synthesized.
+
+Synthesizing Unit <i2c_com>.
+    Related source file is "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/cmos_i2c_ov5640/i2c_com.v".
+    Found 1-bit register for signal <ack1>.
+    Found 1-bit register for signal <ack2>.
+    Found 1-bit register for signal <ack3>.
+    Found 1-bit register for signal <sclk>.
+    Found 1-bit register for signal <reg_sdat>.
+    Found 6-bit register for signal <cyc_count>.
+    Found 1-bit register for signal <tr_end>.
+    Found 6-bit adder for signal <cyc_count[5]_GND_33_o_add_8_OUT> created at line 43.
+    Found 1-bit tristate buffer for signal <i2c_sdat> created at line 31
+    Found 6-bit comparator lessequal for signal <n0002> created at line 30
+    Found 6-bit comparator lessequal for signal <n0004> created at line 30
+    Found 6-bit comparator lessequal for signal <cyc_count[5]_PWR_27_o_LessThan_8_o> created at line 42
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred  44 Multiplexer(s).
+	inferred   1 Tristate(s).
+Unit <i2c_com> synthesized.
+
+Synthesizing Unit <CMOS_Capture>.
+    Related source file is "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/cmos_i2c_ov5640/CMOS_Capture.v".
+    Found 1-bit register for signal <mCMOS_VSYNC>.
+    Found 1-bit register for signal <byte_state>.
+    Found 1-bit register for signal <Frame_valid>.
+    Found 1-bit register for signal <CMOS_oCLK>.
+    Found 1-bit register for signal <CMOS_VALID>.
+    Found 1-bit register for signal <fps_state>.
+    Found 8-bit register for signal <Pre_CMOS_iDATA>.
+    Found 8-bit register for signal <fps_data>.
+    Found 8-bit register for signal <CMOS_FPS_DATA>.
+    Found 16-bit register for signal <CMOS_oDATA>.
+    Found 4-bit register for signal <Frame_Cont>.
+    Found 26-bit register for signal <delay_cnt>.
+    Found 1-bit adder for signal <byte_state_PWR_28_o_add_1_OUT<0>> created at line 117.
+    Found 4-bit adder for signal <Frame_Cont[3]_GND_36_o_add_10_OUT> created at line 150.
+    Found 26-bit adder for signal <delay_cnt[25]_GND_36_o_add_18_OUT> created at line 200.
+    Found 8-bit adder for signal <fps_data[7]_GND_36_o_add_25_OUT> created at line 230.
+    Found 4-bit comparator lessequal for signal <Frame_Cont[3]_PWR_28_o_LessThan_10_o> created at line 148
+    Found 26-bit comparator greater for signal <delay_cnt[25]_PWR_28_o_LessThan_18_o> created at line 199
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  76 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  11 Multiplexer(s).
+Unit <CMOS_Capture> synthesized.
+
+Synthesizing Unit <sdram_vga_top>.
+    Related source file is "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_vga_top.v".
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_vga_top.v" line 66: Output port <sdram_wr_req> of the instance <u_sdram_2fifo_top> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_vga_top.v" line 66: Output port <sdram_rd_req> of the instance <u_sdram_2fifo_top> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_vga_top.v" line 132: Output port <state_write> of the instance <u_sdbank_switch> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_vga_top.v" line 158: Output port <lcd_en> of the instance <u_lcd_top> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <sdram_vga_top> synthesized.
+
+Synthesizing Unit <sdram_2fifo_top>.
+    Related source file is "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip/sdram_2fifo_top.v".
+    Summary:
+	no macro.
+Unit <sdram_2fifo_top> synthesized.
+
+Synthesizing Unit <sdram_top>.
+    Related source file is "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip/sdram_top.v".
+    Summary:
+	no macro.
+Unit <sdram_top> synthesized.
+
+Synthesizing Unit <sdram_ctrl>.
+    Related source file is "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip/sdram_ctrl.v".
+        TRP_CLK = 9'b000000100
+        TRFC_CLK = 9'b000000110
+        TMRD_CLK = 9'b000000110
+        TRCD_CLK = 9'b000000010
+        TCL_CLK = 9'b000000011
+        TDAL_CLK = 9'b000000011
+    Found 4-bit register for signal <init_state_r>.
+    Found 4-bit register for signal <work_state_r>.
+    Found 11-bit register for signal <cnt_15us>.
+    Found 9-bit register for signal <cnt_clk_r>.
+    Found 15-bit register for signal <cnt_200us>.
+    Found 1-bit register for signal <sdram_ref_req>.
+    Found 1-bit register for signal <sys_r_wn>.
+    Found finite state machine <FSM_1> for signal <init_state_r>.
+    -----------------------------------------------------------------------
+    | States             | 10                                             |
+    | Transitions        | 15                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst_n (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+INFO:Xst:1799 - State 0110 is never reached in FSM <work_state_r>.
+    Found finite state machine <FSM_2> for signal <work_state_r>.
+    -----------------------------------------------------------------------
+    | States             | 12                                             |
+    | Transitions        | 22                                             |
+    | Inputs             | 12                                             |
+    | Outputs            | 9                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst_n (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 15-bit adder for signal <cnt_200us[14]_GND_41_o_add_1_OUT> created at line 71.
+    Found 11-bit adder for signal <cnt_15us[10]_GND_41_o_add_19_OUT> created at line 107.
+    Found 9-bit adder for signal <cnt_clk_r[8]_GND_41_o_add_57_OUT> created at line 213.
+    Found 15-bit comparator greater for signal <cnt_200us[14]_PWR_32_o_LessThan_1_o> created at line 71
+    Found 11-bit comparator greater for signal <cnt_15us[10]_PWR_32_o_LessThan_19_o> created at line 107
+    Found 9-bit comparator greater for signal <cnt_clk_r[8]_sdwr_byte[8]_LessThan_53_o> created at line 197
+    Found 9-bit comparator lessequal for signal <n0066> created at line 200
+    Found 9-bit comparator greater for signal <cnt_clk_r[8]_sdrd_byte[8]_LessThan_57_o> created at line 200
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  37 D-type flip-flop(s).
+	inferred   5 Comparator(s).
+	inferred  12 Multiplexer(s).
+	inferred   2 Finite State Machine(s).
+Unit <sdram_ctrl> synthesized.
+
+Synthesizing Unit <sdram_cmd>.
+    Related source file is "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip/sdram_cmd.v".
+    Found 12-bit register for signal <sdram_addr_r>.
+    Found 2-bit register for signal <sdram_ba_r>.
+    Found 5-bit register for signal <sdram_cmd_r>.
+    Summary:
+	inferred  19 D-type flip-flop(s).
+	inferred  44 Multiplexer(s).
+Unit <sdram_cmd> synthesized.
+
+Synthesizing Unit <sdram_wr_data>.
+    Related source file is "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip/sdram_wr_data.v".
+WARNING:Xst:647 - Input <cnt_clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit register for signal <sdr_dout>.
+    Found 16-bit register for signal <sdr_din>.
+    Found 1-bit register for signal <sdr_dlink>.
+    Found 1-bit tristate buffer for signal <sdram_data<15>> created at line 46
+    Found 1-bit tristate buffer for signal <sdram_data<14>> created at line 46
+    Found 1-bit tristate buffer for signal <sdram_data<13>> created at line 46
+    Found 1-bit tristate buffer for signal <sdram_data<12>> created at line 46
+    Found 1-bit tristate buffer for signal <sdram_data<11>> created at line 46
+    Found 1-bit tristate buffer for signal <sdram_data<10>> created at line 46
+    Found 1-bit tristate buffer for signal <sdram_data<9>> created at line 46
+    Found 1-bit tristate buffer for signal <sdram_data<8>> created at line 46
+    Found 1-bit tristate buffer for signal <sdram_data<7>> created at line 46
+    Found 1-bit tristate buffer for signal <sdram_data<6>> created at line 46
+    Found 1-bit tristate buffer for signal <sdram_data<5>> created at line 46
+    Found 1-bit tristate buffer for signal <sdram_data<4>> created at line 46
+    Found 1-bit tristate buffer for signal <sdram_data<3>> created at line 46
+    Found 1-bit tristate buffer for signal <sdram_data<2>> created at line 46
+    Found 1-bit tristate buffer for signal <sdram_data<1>> created at line 46
+    Found 1-bit tristate buffer for signal <sdram_data<0>> created at line 46
+    Summary:
+	inferred  33 D-type flip-flop(s).
+	inferred  16 Tristate(s).
+Unit <sdram_wr_data> synthesized.
+
+Synthesizing Unit <dcfifo_ctrl>.
+    Related source file is "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip/dcfifo_ctrl.v".
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip/dcfifo_ctrl.v" line 235: Output port <wr_data_count> of the instance <u_wrfifo> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip/dcfifo_ctrl.v" line 235: Output port <full> of the instance <u_wrfifo> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip/dcfifo_ctrl.v" line 235: Output port <empty> of the instance <u_wrfifo> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip/dcfifo_ctrl.v" line 256: Output port <rd_data_count> of the instance <u_rdfifo> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip/dcfifo_ctrl.v" line 256: Output port <full> of the instance <u_rdfifo> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip/dcfifo_ctrl.v" line 256: Output port <empty> of the instance <u_rdfifo> is unconnected or connected to loadless signal.
+    Found 22-bit register for signal <sdram_wraddr>.
+    Found 22-bit register for signal <sdram_rdaddr>.
+    Found 1-bit register for signal <sdram_wr_ackr2>.
+    Found 1-bit register for signal <sdram_rd_ackr1>.
+    Found 1-bit register for signal <sdram_rd_ackr2>.
+    Found 1-bit register for signal <wr_load_r1>.
+    Found 1-bit register for signal <wr_load_r2>.
+    Found 1-bit register for signal <rd_load_r1>.
+    Found 1-bit register for signal <rd_load_r2>.
+    Found 1-bit register for signal <data_valid_r>.
+    Found 1-bit register for signal <frame_write_done>.
+    Found 1-bit register for signal <frame_read_done>.
+    Found 1-bit register for signal <sdram_wr_req>.
+    Found 1-bit register for signal <sdram_rd_req>.
+    Found 1-bit register for signal <sdram_wr_ackr1>.
+    Found 22-bit subtractor for signal <wr_max_addr[21]_GND_61_o_sub_1_OUT> created at line 136.
+    Found 22-bit subtractor for signal <rd_max_addr[21]_GND_61_o_sub_8_OUT> created at line 175.
+    Found 22-bit adder for signal <sdram_wraddr[21]_GND_61_o_add_2_OUT> created at line 138.
+    Found 22-bit adder for signal <sdram_rdaddr[21]_GND_61_o_add_9_OUT> created at line 177.
+    Found 22-bit comparator lessequal for signal <sdram_wraddr[21]_wr_max_addr[21]_LessThan_2_o> created at line 136
+    Found 22-bit comparator lessequal for signal <sdram_rdaddr[21]_rd_max_addr[21]_LessThan_9_o> created at line 175
+    Found 9-bit comparator lessequal for signal <n0044> created at line 208
+    Found 9-bit comparator greater for signal <rdf_use[8]_rd_length[8]_LessThan_18_o> created at line 213
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  57 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred   9 Multiplexer(s).
+Unit <dcfifo_ctrl> synthesized.
+
+Synthesizing Unit <sdbank_switch>.
+    Related source file is "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip/sdbank_switch.v".
+    Found 2-bit register for signal <rd_bank>.
+    Found 2-bit register for signal <wr_bank>.
+    Found 3-bit register for signal <state_write>.
+    Found 3-bit register for signal <state_read>.
+    Found 1-bit register for signal <bank_valid_r1>.
+    Found 1-bit register for signal <wr_load>.
+    Found 1-bit register for signal <rd_load>.
+    Found 1-bit register for signal <bank_valid_r0>.
+    Found finite state machine <FSM_3> for signal <state_write>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk (falling_edge)                             |
+    | Reset              | rst_n (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_4> for signal <state_read>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk (falling_edge)                             |
+    | Reset              | rst_n (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   8 D-type flip-flop(s).
+	inferred   2 Finite State Machine(s).
+Unit <sdbank_switch> synthesized.
+
+Synthesizing Unit <lcd_top>.
+    Related source file is "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/lcd_ip/lcd_top.v".
+    Summary:
+	no macro.
+Unit <lcd_top> synthesized.
+
+Synthesizing Unit <lcd_driver>.
+    Related source file is "D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/lcd_ip/lcd_driver.v".
+    Found 11-bit register for signal <vcnt>.
+    Found 11-bit register for signal <hcnt>.
+    Found 11-bit subtractor for signal <hcnt[10]_GND_67_o_sub_22_OUT> created at line 83.
+    Found 11-bit subtractor for signal <vcnt[10]_GND_67_o_sub_24_OUT> created at line 84.
+    Found 11-bit adder for signal <hcnt[10]_GND_67_o_add_1_OUT> created at line 42.
+    Found 11-bit adder for signal <vcnt[10]_GND_67_o_add_7_OUT> created at line 59.
+    Found 11-bit comparator greater for signal <hcnt[10]_GND_67_o_LessThan_1_o> created at line 41
+    Found 11-bit comparator greater for signal <lcd_hs> created at line 47
+    Found 11-bit comparator greater for signal <vcnt[10]_GND_67_o_LessThan_7_o> created at line 58
+    Found 11-bit comparator greater for signal <lcd_vs> created at line 64
+    Found 11-bit comparator lessequal for signal <n0019> created at line 71
+    Found 11-bit comparator greater for signal <hcnt[10]_GND_67_o_LessThan_14_o> created at line 71
+    Found 11-bit comparator lessequal for signal <n0023> created at line 72
+    Found 11-bit comparator greater for signal <vcnt[10]_GND_67_o_LessThan_16_o> created at line 72
+    Found 11-bit comparator lessequal for signal <n0031> created at line 80
+    Found 11-bit comparator greater for signal <hcnt[10]_GND_67_o_LessThan_19_o> created at line 80
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  22 D-type flip-flop(s).
+	inferred  10 Comparator(s).
+	inferred   5 Multiplexer(s).
+Unit <lcd_driver> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 256x32-bit single-port Read Only RAM                  : 1
+# Multipliers                                          : 3
+ 32x6-bit multiplier                                   : 3
+# Adders/Subtractors                                   : 224
+ 1-bit adder                                           : 1
+ 10-bit adder                                          : 4
+ 11-bit adder                                          : 18
+ 11-bit subtractor                                     : 2
+ 12-bit adder                                          : 3
+ 13-bit adder                                          : 3
+ 14-bit adder                                          : 3
+ 15-bit adder                                          : 4
+ 16-bit adder                                          : 7
+ 17-bit adder                                          : 3
+ 17-bit subtractor                                     : 3
+ 18-bit adder                                          : 6
+ 19-bit adder                                          : 3
+ 20-bit adder                                          : 4
+ 21-bit adder                                          : 3
+ 22-bit adder                                          : 5
+ 22-bit subtractor                                     : 2
+ 23-bit adder                                          : 3
+ 24-bit adder                                          : 3
+ 25-bit adder                                          : 3
+ 26-bit adder                                          : 4
+ 27-bit adder                                          : 6
+ 28-bit adder                                          : 3
+ 29-bit adder                                          : 3
+ 32-bit subtractor                                     : 6
+ 33-bit adder                                          : 6
+ 34-bit adder                                          : 6
+ 35-bit adder                                          : 6
+ 36-bit adder                                          : 6
+ 37-bit adder                                          : 6
+ 38-bit adder                                          : 6
+ 39-bit adder                                          : 6
+ 4-bit adder                                           : 1
+ 40-bit adder                                          : 6
+ 41-bit adder                                          : 6
+ 42-bit adder                                          : 6
+ 43-bit adder                                          : 6
+ 44-bit adder                                          : 6
+ 45-bit adder                                          : 6
+ 46-bit adder                                          : 6
+ 47-bit adder                                          : 6
+ 48-bit adder                                          : 6
+ 49-bit adder                                          : 6
+ 6-bit adder                                           : 4
+ 7-bit adder                                           : 3
+ 8-bit adder                                           : 4
+ 9-bit adder                                           : 5
+# Registers                                            : 173
+ 1-bit register                                        : 68
+ 10-bit register                                       : 1
+ 11-bit register                                       : 15
+ 12-bit register                                       : 1
+ 15-bit register                                       : 1
+ 16-bit register                                       : 7
+ 2-bit register                                        : 3
+ 20-bit register                                       : 1
+ 22-bit register                                       : 2
+ 24-bit register                                       : 1
+ 26-bit register                                       : 1
+ 32-bit register                                       : 1
+ 4-bit register                                        : 1
+ 5-bit register                                        : 61
+ 6-bit register                                        : 1
+ 8-bit register                                        : 6
+ 9-bit register                                        : 2
+# Comparators                                          : 141
+ 11-bit comparator greater                             : 59
+ 11-bit comparator lessequal                           : 3
+ 15-bit comparator greater                             : 1
+ 16-bit comparator greater                             : 2
+ 16-bit comparator lessequal                           : 2
+ 20-bit comparator greater                             : 1
+ 22-bit comparator lessequal                           : 2
+ 26-bit comparator greater                             : 1
+ 32-bit comparator greater                             : 9
+ 33-bit comparator greater                             : 3
+ 34-bit comparator greater                             : 3
+ 35-bit comparator greater                             : 3
+ 36-bit comparator greater                             : 3
+ 37-bit comparator greater                             : 3
+ 38-bit comparator greater                             : 3
+ 39-bit comparator greater                             : 3
+ 4-bit comparator lessequal                            : 1
+ 40-bit comparator greater                             : 3
+ 41-bit comparator greater                             : 3
+ 42-bit comparator greater                             : 3
+ 43-bit comparator greater                             : 3
+ 44-bit comparator greater                             : 3
+ 45-bit comparator greater                             : 3
+ 46-bit comparator greater                             : 3
+ 47-bit comparator greater                             : 3
+ 48-bit comparator greater                             : 3
+ 49-bit comparator greater                             : 3
+ 6-bit comparator lessequal                            : 3
+ 9-bit comparator greater                              : 4
+ 9-bit comparator lessequal                            : 2
+# Multiplexers                                         : 1059
+ 1-bit 2-to-1 multiplexer                              : 969
+ 11-bit 2-to-1 multiplexer                             : 5
+ 12-bit 2-to-1 multiplexer                             : 14
+ 16-bit 2-to-1 multiplexer                             : 4
+ 17-bit 2-to-1 multiplexer                             : 3
+ 18-bit 2-to-1 multiplexer                             : 3
+ 2-bit 2-to-1 multiplexer                              : 14
+ 22-bit 2-to-1 multiplexer                             : 4
+ 26-bit 2-to-1 multiplexer                             : 2
+ 32-bit 2-to-1 multiplexer                             : 8
+ 5-bit 2-to-1 multiplexer                              : 15
+ 6-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 13
+ 9-bit 2-to-1 multiplexer                              : 4
+# Tristates                                            : 17
+ 1-bit tristate buffer                                 : 17
+# FSMs                                                 : 5
+# Xors                                                 : 3
+ 1-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <d:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/ipcore_dir/wrfifo.ngc>.
+Reading core <d:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/ipcore_dir/rdfifo.ngc>.
+Reading core <d:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/ip/fifo_generator_v9_3_1/fifo_display.ngc>.
+Reading core <d:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/ip/fifo_generator_v9_3_0/fifo.ngc>.
+Loading core <wrfifo> for timing and area information for instance <u_wrfifo>.
+Loading core <rdfifo> for timing and area information for instance <u_rdfifo>.
+Loading core <fifo_display> for timing and area information for instance <d1>.
+Loading core <fifo> for timing and area information for instance <fifo0>.
+Loading core <fifo> for timing and area information for instance <fifo1>.
+Loading core <fifo> for timing and area information for instance <fifo2>.
+Loading core <fifo> for timing and area information for instance <fifo3>.
+
+Synthesizing (advanced) Unit <CMOS_Capture>.
+The following registers are absorbed into counter <byte_state>: 1 register on signal <byte_state>.
+The following registers are absorbed into counter <Frame_Cont>: 1 register on signal <Frame_Cont>.
+Unit <CMOS_Capture> synthesized (advanced).
+
+Synthesizing (advanced) Unit <cartoon>.
+	The following adders/subtractors are grouped into adder tree <Madd_n02271> :
+ 	<Madd_n0158[5:0]> in block <cartoon>, 	<Madd_n0161[6:0]> in block <cartoon>, 	<Madd_n0164[7:0]> in block <cartoon>, 	<Madd_n0167[8:0]> in block <cartoon>, 	<Madd_n0170[9:0]> in block <cartoon>, 	<Madd_n0173[10:0]> in block <cartoon>, 	<Madd_n0176[11:0]> in block <cartoon>, 	<Madd_n0179[12:0]> in block <cartoon>, 	<Madd_n0182[13:0]> in block <cartoon>, 	<Madd_n0185[14:0]> in block <cartoon>, 	<Madd_n0188[15:0]> in block <cartoon>, 	<Madd_n0191[16:0]> in block <cartoon>, 	<Madd_n0194[17:0]> in block <cartoon>, 	<Madd_n0197[18:0]> in block <cartoon>, 	<Madd_n0200[19:0]> in block <cartoon>, 	<Madd_n0203[20:0]> in block <cartoon>, 	<Madd_n0206[21:0]> in block <cartoon>, 	<Madd_n0209[22:0]> in block <cartoon>, 	<Madd_n0212[23:0]> in block <cartoon>, 	<Madd_n0215[24:0]> in block <cartoon>, 	<Madd_n0218[25:0]> in block <cartoon>, 	<Madd_n0221[26:0]> in block <cartoon>, 	<Madd_n0224[27:0]> in block <cartoon>, 	<Madd_n0227> in block <cartoon>.
+Unit <cartoon> synthesized (advanced).
+
+Synthesizing (advanced) Unit <fifo_counter>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <fifo_counter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <i2c_com>.
+The following registers are absorbed into counter <cyc_count>: 1 register on signal <cyc_count>.
+Unit <i2c_com> synthesized (advanced).
+
+Synthesizing (advanced) Unit <lcd_driver>.
+The following registers are absorbed into counter <hcnt>: 1 register on signal <hcnt>.
+The following registers are absorbed into counter <vcnt>: 1 register on signal <vcnt>.
+Unit <lcd_driver> synthesized (advanced).
+
+Synthesizing (advanced) Unit <power_on_delay>.
+The following registers are absorbed into counter <cnt2>: 1 register on signal <cnt2>.
+The following registers are absorbed into counter <cnt3>: 1 register on signal <cnt3>.
+Unit <power_on_delay> synthesized (advanced).
+
+Synthesizing (advanced) Unit <reg_config>.
+The following registers are absorbed into counter <clock_20k_cnt>: 1 register on signal <clock_20k_cnt>.
+The following registers are absorbed into counter <on_counter>: 1 register on signal <on_counter>.
+The following registers are absorbed into counter <off_counter>: 1 register on signal <off_counter>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0911> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 32-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <reg_index<7:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <reg_config> synthesized (advanced).
+
+Synthesizing (advanced) Unit <sdram_ctrl>.
+The following registers are absorbed into counter <cnt_15us>: 1 register on signal <cnt_15us>.
+The following registers are absorbed into counter <cnt_clk_r>: 1 register on signal <cnt_clk_r>.
+The following registers are absorbed into counter <cnt_200us>: 1 register on signal <cnt_200us>.
+Unit <sdram_ctrl> synthesized (advanced).
+
+Synthesizing (advanced) Unit <system_ctrl>.
+The following registers are absorbed into counter <delay_cnt>: 1 register on signal <delay_cnt>.
+Unit <system_ctrl> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 256x32-bit single-port distributed Read Only RAM      : 1
+# Multipliers                                          : 3
+ 32x6-bit multiplier                                   : 3
+# Adders/Subtractors                                   : 75
+ 11-bit subtractor                                     : 2
+ 17-bit adder carry in                                 : 51
+ 17-bit subtractor                                     : 3
+ 18-bit adder                                          : 3
+ 22-bit adder                                          : 2
+ 22-bit subtractor                                     : 2
+ 26-bit adder                                          : 1
+ 32-bit subtractor                                     : 6
+ 8-bit adder                                           : 4
+ 9-bit adder                                           : 1
+# Adder Trees                                          : 3
+ 29-bit / 25-inputs adder tree                         : 3
+# Counters                                             : 26
+ 1-bit up counter                                      : 1
+ 10-bit up counter                                     : 1
+ 11-bit up counter                                     : 15
+ 15-bit up counter                                     : 1
+ 16-bit up counter                                     : 4
+ 20-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+ 6-bit up counter                                      : 1
+ 9-bit up counter                                      : 1
+# Registers                                            : 621
+ Flip-Flops                                            : 621
+# Comparators                                          : 141
+ 11-bit comparator greater                             : 59
+ 11-bit comparator lessequal                           : 3
+ 15-bit comparator greater                             : 1
+ 16-bit comparator greater                             : 2
+ 16-bit comparator lessequal                           : 2
+ 20-bit comparator greater                             : 1
+ 22-bit comparator lessequal                           : 2
+ 26-bit comparator greater                             : 1
+ 32-bit comparator greater                             : 9
+ 33-bit comparator greater                             : 3
+ 34-bit comparator greater                             : 3
+ 35-bit comparator greater                             : 3
+ 36-bit comparator greater                             : 3
+ 37-bit comparator greater                             : 3
+ 38-bit comparator greater                             : 3
+ 39-bit comparator greater                             : 3
+ 4-bit comparator lessequal                            : 1
+ 40-bit comparator greater                             : 3
+ 41-bit comparator greater                             : 3
+ 42-bit comparator greater                             : 3
+ 43-bit comparator greater                             : 3
+ 44-bit comparator greater                             : 3
+ 45-bit comparator greater                             : 3
+ 46-bit comparator greater                             : 3
+ 47-bit comparator greater                             : 3
+ 48-bit comparator greater                             : 3
+ 49-bit comparator greater                             : 3
+ 6-bit comparator lessequal                            : 3
+ 9-bit comparator greater                              : 4
+ 9-bit comparator lessequal                            : 2
+# Multiplexers                                         : 1050
+ 1-bit 2-to-1 multiplexer                              : 968
+ 11-bit 2-to-1 multiplexer                             : 2
+ 12-bit 2-to-1 multiplexer                             : 14
+ 16-bit 2-to-1 multiplexer                             : 1
+ 17-bit 2-to-1 multiplexer                             : 3
+ 18-bit 2-to-1 multiplexer                             : 3
+ 2-bit 2-to-1 multiplexer                              : 14
+ 22-bit 2-to-1 multiplexer                             : 4
+ 26-bit 2-to-1 multiplexer                             : 2
+ 32-bit 2-to-1 multiplexer                             : 8
+ 5-bit 2-to-1 multiplexer                              : 15
+ 8-bit 2-to-1 multiplexer                              : 13
+ 9-bit 2-to-1 multiplexer                              : 3
+# FSMs                                                 : 5
+# Xors                                                 : 3
+ 1-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <u_sdram_vga_top/u_sdram_2fifo_top/u_sdramtop/module_001/FSM_1> on signal <init_state_r[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 0010  | 0010
+ 0011  | 0011
+ 0100  | 0100
+ 0101  | 0101
+ 0110  | 0110
+ 0111  | 0111
+ 1000  | 1000
+ 1001  | 1001
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <u_sdram_vga_top/u_sdram_2fifo_top/u_sdramtop/module_001/FSM_2> on signal <work_state_r[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 1010  | 1010
+ 0010  | 0010
+ 0111  | 0111
+ 0011  | 0011
+ 0100  | 0100
+ 0101  | 0101
+ 0110  | unreached
+ 1000  | 1000
+ 1001  | 1001
+ 1011  | 1011
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <u_sdram_vga_top/u_sdbank_switch/FSM_3> on signal <state_write[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 100   | 100
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <u_sdram_vga_top/u_sdbank_switch/FSM_4> on signal <state_read[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 100   | 100
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <reg_config_inst/FSM_0> on signal <config_step[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+ 11    | 11
+-------------------
+WARNING:Xst:1710 - FF/Latch <CMOS_FPS_DATA_7> (without init value) has a constant value of 0 in block <CMOS_Capture>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sdram_wraddr_0> (without init value) has a constant value of 0 in block <dcfifo_ctrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sdram_wraddr_1> (without init value) has a constant value of 0 in block <dcfifo_ctrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sdram_wraddr_2> (without init value) has a constant value of 0 in block <dcfifo_ctrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sdram_wraddr_3> (without init value) has a constant value of 0 in block <dcfifo_ctrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sdram_wraddr_4> (without init value) has a constant value of 0 in block <dcfifo_ctrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sdram_wraddr_5> (without init value) has a constant value of 0 in block <dcfifo_ctrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sdram_wraddr_6> (without init value) has a constant value of 0 in block <dcfifo_ctrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sdram_wraddr_7> (without init value) has a constant value of 0 in block <dcfifo_ctrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sdram_rdaddr_0> (without init value) has a constant value of 0 in block <dcfifo_ctrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sdram_rdaddr_1> (without init value) has a constant value of 0 in block <dcfifo_ctrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sdram_rdaddr_2> (without init value) has a constant value of 0 in block <dcfifo_ctrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sdram_rdaddr_3> (without init value) has a constant value of 0 in block <dcfifo_ctrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sdram_rdaddr_4> (without init value) has a constant value of 0 in block <dcfifo_ctrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sdram_rdaddr_5> (without init value) has a constant value of 0 in block <dcfifo_ctrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sdram_rdaddr_6> (without init value) has a constant value of 0 in block <dcfifo_ctrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sdram_rdaddr_7> (without init value) has a constant value of 0 in block <dcfifo_ctrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <i2c_data_14> (without init value) has a constant value of 0 in block <reg_config>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <i2c_data_23> (without init value) has a constant value of 0 in block <reg_config>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <i2c_data_24> (without init value) has a constant value of 0 in block <reg_config>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <i2c_data_25> (without init value) has a constant value of 0 in block <reg_config>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <i2c_data_26> (without init value) has a constant value of 0 in block <reg_config>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <i2c_data_27> (without init value) has a constant value of 1 in block <reg_config>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <i2c_data_28> (without init value) has a constant value of 1 in block <reg_config>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <i2c_data_29> (without init value) has a constant value of 1 in block <reg_config>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <i2c_data_30> (without init value) has a constant value of 1 in block <reg_config>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <i2c_data_31> (without init value) has a constant value of 0 in block <reg_config>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:1901 - Instance pll_base_inst in unit pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
+WARNING:Xst:2677 - Node <reg_config_inst/strobe_flash> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <reg_config_inst/u1/ack1> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <reg_config_inst/u1/ack3> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <reg_config_inst/u1/ack2> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+
+Optimizing unit <sdram_pll> ...
+
+Optimizing unit <sr5> ...
+
+Optimizing unit <sdram_ov5640_lcd> ...
+
+Optimizing unit <CMOS_Capture> ...
+
+Optimizing unit <dcfifo_ctrl> ...
+
+Optimizing unit <sdram_cmd> ...
+
+Optimizing unit <sdram_ctrl> ...
+
+Optimizing unit <lcd_driver> ...
+
+Optimizing unit <sdbank_switch> ...
+
+Optimizing unit <power_on_delay> ...
+
+Optimizing unit <cartoon_top> ...
+
+Optimizing unit <cartoon> ...
+
+Optimizing unit <div_17s_32s> ...
+WARNING:Xst:2677 - Node <u_CMOS_Capture/CMOS_FPS_DATA_6> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/CMOS_FPS_DATA_5> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/CMOS_FPS_DATA_4> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/CMOS_FPS_DATA_3> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/CMOS_FPS_DATA_2> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/CMOS_FPS_DATA_1> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/CMOS_FPS_DATA_0> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/fps_data_7> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/fps_data_6> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/fps_data_5> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/fps_data_4> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/fps_data_3> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/fps_data_2> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/fps_data_1> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/fps_data_0> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/delay_cnt_25> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/delay_cnt_24> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/delay_cnt_23> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/delay_cnt_22> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/delay_cnt_21> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/delay_cnt_20> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/delay_cnt_19> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/delay_cnt_18> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/delay_cnt_17> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/delay_cnt_16> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/delay_cnt_15> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/delay_cnt_14> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/delay_cnt_13> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/delay_cnt_12> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/delay_cnt_11> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/delay_cnt_10> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/delay_cnt_9> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/delay_cnt_8> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/delay_cnt_7> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/delay_cnt_6> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/delay_cnt_5> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/delay_cnt_4> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/delay_cnt_3> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/delay_cnt_2> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/delay_cnt_1> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/delay_cnt_0> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:2677 - Node <u_CMOS_Capture/fps_state> of sequential type is unconnected in block <sdram_ov5640_lcd>.
+WARNING:Xst:1293 - FF/Latch <top/cg/counter1/count_8> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cg/counter2/count_10> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cg/counter2/count_9> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cg/counter2/count_8> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cg/counter3/count_10> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cg/counter3/count_9> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cg/counter3/count_8> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cr/counter0/count_10> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cr/counter0/count_9> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cr/counter0/count_8> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cr/counter1/count_10> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cr/counter1/count_9> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cr/counter1/count_8> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cr/counter2/count_10> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cr/counter2/count_9> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cr/counter2/count_8> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cr/counter3/count_10> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cr/counter3/count_9> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cr/counter3/count_8> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <u_sdram_vga_top/u_lcd_top/u_lcd_driver/vcnt_10> (without init value) has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <u_sdram_vga_top/u_lcd_top/u_lcd_driver/vcnt_9> (without init value) has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <u_sdram_vga_top/u_lcd_top/u_lcd_driver/hcnt_10> (without init value) has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cb/counter0/count_10> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cb/counter0/count_9> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cb/counter0/count_8> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cb/counter1/count_10> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cb/counter1/count_9> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cb/counter1/count_8> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cb/counter2/count_10> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cb/counter2/count_9> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cb/counter2/count_8> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cb/counter3/count_10> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cb/counter3/count_9> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cb/counter3/count_8> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cg/counter0/count_10> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cg/counter0/count_9> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cg/counter0/count_8> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cg/counter1/count_10> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <top/cg/counter1/count_9> has a constant value of 0 in block <sdram_ov5640_lcd>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <top/cb/counter0/count_0> in Unit <sdram_ov5640_lcd> is equivalent to the following 11 FFs/Latches, which will be removed : <top/cb/counter1/count_0> <top/cb/counter2/count_0> <top/cb/counter3/count_0> <top/cg/counter0/count_0> <top/cg/counter1/count_0> <top/cg/counter2/count_0> <top/cg/counter3/count_0> <top/cr/counter0/count_0> <top/cr/counter1/count_0> <top/cr/counter2/count_0> <top/cr/counter3/count_0> 
+INFO:Xst:2261 - The FF/Latch <top/cb/counter0/count_1> in Unit <sdram_ov5640_lcd> is equivalent to the following 11 FFs/Latches, which will be removed : <top/cb/counter1/count_1> <top/cb/counter2/count_1> <top/cb/counter3/count_1> <top/cg/counter0/count_1> <top/cg/counter1/count_1> <top/cg/counter2/count_1> <top/cg/counter3/count_1> <top/cr/counter0/count_1> <top/cr/counter1/count_1> <top/cr/counter2/count_1> <top/cr/counter3/count_1> 
+INFO:Xst:2261 - The FF/Latch <top/cb/counter0/count_2> in Unit <sdram_ov5640_lcd> is equivalent to the following 11 FFs/Latches, which will be removed : <top/cb/counter1/count_2> <top/cb/counter2/count_2> <top/cb/counter3/count_2> <top/cg/counter0/count_2> <top/cg/counter1/count_2> <top/cg/counter2/count_2> <top/cg/counter3/count_2> <top/cr/counter0/count_2> <top/cr/counter1/count_2> <top/cr/counter2/count_2> <top/cr/counter3/count_2> 
+INFO:Xst:2261 - The FF/Latch <top/cb/counter0/count_3> in Unit <sdram_ov5640_lcd> is equivalent to the following 11 FFs/Latches, which will be removed : <top/cb/counter1/count_3> <top/cb/counter2/count_3> <top/cb/counter3/count_3> <top/cg/counter0/count_3> <top/cg/counter1/count_3> <top/cg/counter2/count_3> <top/cg/counter3/count_3> <top/cr/counter0/count_3> <top/cr/counter1/count_3> <top/cr/counter2/count_3> <top/cr/counter3/count_3> 
+INFO:Xst:2261 - The FF/Latch <top/cb/counter0/count_4> in Unit <sdram_ov5640_lcd> is equivalent to the following 11 FFs/Latches, which will be removed : <top/cb/counter1/count_4> <top/cb/counter2/count_4> <top/cb/counter3/count_4> <top/cg/counter0/count_4> <top/cg/counter1/count_4> <top/cg/counter2/count_4> <top/cg/counter3/count_4> <top/cr/counter0/count_4> <top/cr/counter1/count_4> <top/cr/counter2/count_4> <top/cr/counter3/count_4> 
+INFO:Xst:2261 - The FF/Latch <top/cb/counter0/count_5> in Unit <sdram_ov5640_lcd> is equivalent to the following 11 FFs/Latches, which will be removed : <top/cb/counter1/count_5> <top/cb/counter2/count_5> <top/cb/counter3/count_5> <top/cg/counter0/count_5> <top/cg/counter1/count_5> <top/cg/counter2/count_5> <top/cg/counter3/count_5> <top/cr/counter0/count_5> <top/cr/counter1/count_5> <top/cr/counter2/count_5> <top/cr/counter3/count_5> 
+INFO:Xst:2261 - The FF/Latch <top/cb/counter0/count_6> in Unit <sdram_ov5640_lcd> is equivalent to the following 11 FFs/Latches, which will be removed : <top/cb/counter1/count_6> <top/cb/counter2/count_6> <top/cb/counter3/count_6> <top/cg/counter0/count_6> <top/cg/counter1/count_6> <top/cg/counter2/count_6> <top/cg/counter3/count_6> <top/cr/counter0/count_6> <top/cr/counter1/count_6> <top/cr/counter2/count_6> <top/cr/counter3/count_6> 
+INFO:Xst:2261 - The FF/Latch <top/cb/counter0/count_7> in Unit <sdram_ov5640_lcd> is equivalent to the following 11 FFs/Latches, which will be removed : <top/cb/counter1/count_7> <top/cb/counter2/count_7> <top/cb/counter3/count_7> <top/cg/counter0/count_7> <top/cg/counter1/count_7> <top/cg/counter2/count_7> <top/cg/counter3/count_7> <top/cr/counter0/count_7> <top/cr/counter1/count_7> <top/cr/counter2/count_7> <top/cr/counter3/count_7> 
+INFO:Xst:2261 - The FF/Latch <top/wr_en> in Unit <sdram_ov5640_lcd> is equivalent to the following 12 FFs/Latches, which will be removed : <top/cb/counter0/wr_en> <top/cb/counter1/wr_en> <top/cb/counter2/wr_en> <top/cb/counter3/wr_en> <top/cg/counter0/wr_en> <top/cg/counter1/wr_en> <top/cg/counter2/wr_en> <top/cg/counter3/wr_en> <top/cr/counter0/wr_en> <top/cr/counter1/wr_en> <top/cr/counter2/wr_en> <top/cr/counter3/wr_en> 
+INFO:Xst:2261 - The FF/Latch <top/cb/counter0/rd_en> in Unit <sdram_ov5640_lcd> is equivalent to the following 11 FFs/Latches, which will be removed : <top/cb/counter1/rd_en> <top/cb/counter2/rd_en> <top/cb/counter3/rd_en> <top/cg/counter0/rd_en> <top/cg/counter1/rd_en> <top/cg/counter2/rd_en> <top/cg/counter3/rd_en> <top/cr/counter0/rd_en> <top/cr/counter1/rd_en> <top/cr/counter2/rd_en> <top/cr/counter3/rd_en> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block sdram_ov5640_lcd, actual ratio is 78.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1_1> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_2> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_2_1> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_0> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_0_1> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_3> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_3_1> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_4> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_4_1> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_5> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_5_1> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <top/d1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <top/d1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <top/cr/fifo3> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <top/cr/fifo3> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <top/cr/fifo2> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <top/cr/fifo2> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <top/cr/fifo1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <top/cr/fifo1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <top/cr/fifo0> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <top/cr/fifo0> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <top/cg/fifo3> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <top/cg/fifo3> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <top/cg/fifo2> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <top/cg/fifo2> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <top/cg/fifo1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <top/cg/fifo1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <top/cg/fifo0> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <top/cg/fifo0> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <top/cb/fifo3> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <top/cb/fifo3> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <top/cb/fifo2> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <top/cb/fifo2> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <top/cb/fifo1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <top/cb/fifo1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <top/cb/fifo0> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <top/cb/fifo0> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1_1> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_2> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_2_1> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_0> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_0_1> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_3> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_3_1> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_4> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_4_1> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_5> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_5_1> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <top/d1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <top/d1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <top/cr/fifo3> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <top/cr/fifo3> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <top/cr/fifo2> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <top/cr/fifo2> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <top/cr/fifo1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <top/cr/fifo1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <top/cr/fifo0> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <top/cr/fifo0> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <top/cg/fifo3> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <top/cg/fifo3> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <top/cg/fifo2> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <top/cg/fifo2> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <top/cg/fifo1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <top/cg/fifo1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <top/cg/fifo0> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <top/cg/fifo0> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <top/cb/fifo3> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <top/cb/fifo3> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <top/cb/fifo2> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <top/cb/fifo2> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <top/cb/fifo1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <top/cb/fifo1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <top/cb/fifo0> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <top/cb/fifo0> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+FlipFlop power_on_delay_inst/camera_pwnd_reg has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 709
+ Flip-Flops                                            : 709
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : sdram_ov5640_lcd.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 7080
+#      GND                         : 30
+#      INV                         : 124
+#      LUT1                        : 358
+#      LUT2                        : 372
+#      LUT3                        : 655
+#      LUT4                        : 1087
+#      LUT5                        : 644
+#      LUT6                        : 676
+#      MUXCY                       : 1850
+#      MUXF7                       : 65
+#      MUXF8                       : 20
+#      VCC                         : 16
+#      XORCY                       : 1183
+# FlipFlops/Latches                : 1552
+#      FD                          : 60
+#      FDC                         : 257
+#      FDC_1                       : 7
+#      FDCE                        : 272
+#      FDCE_1                      : 4
+#      FDE                         : 822
+#      FDP                         : 47
+#      FDPE                        : 12
+#      FDPE_1                      : 2
+#      FDR                         : 31
+#      FDRE                        : 36
+#      FDSE                        : 1
+#      ODDR2                       : 1
+# RAMS                             : 62
+#      RAM64M                      : 40
+#      RAM64X1D                    : 8
+#      RAMB16BWER                  : 1
+#      RAMB8BWER                   : 13
+# Clock Buffers                    : 8
+#      BUFG                        : 7
+#      BUFGP                       : 1
+# IO Buffers                       : 86
+#      IBUF                        : 12
+#      IBUFG                       : 1
+#      IOBUF                       : 16
+#      OBUF                        : 56
+#      OBUFT                       : 1
+# DSPs                             : 6
+#      DSP48A1                     : 6
+# Others                           : 1
+#      PLL_ADV                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9ftg256-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1551  out of  11440    13%  
+ Number of Slice LUTs:                 4092  out of   5720    71%  
+    Number used as Logic:              3916  out of   5720    68%  
+    Number used as Memory:              176  out of   1440    12%  
+       Number used as RAM:              176
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   4871
+   Number with an unused Flip Flop:    3320  out of   4871    68%  
+   Number with an unused LUT:           779  out of   4871    15%  
+   Number of fully used LUT-FF pairs:   772  out of   4871    15%  
+   Number of unique control sets:       112
+
+IO Utilization: 
+ Number of IOs:                          89
+ Number of bonded IOBs:                  87  out of    186    46%  
+    IOB Flip Flops/Latches:               1
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                8  out of     32    25%  
+    Number using Block RAM only:          8
+ Number of BUFG/BUFGCTRLs:                8  out of     16    50%  
+ Number of DSP48A1s:                      6  out of     16    37%  
+ Number of PLL_ADVs:                      1  out of      2    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------+------------------------+-------+
+Clock Signal                                   | Clock buffer(FF name)  | Load  |
+-----------------------------------------------+------------------------+-------+
+u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT1| BUFG                   | 362   |
+u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT2| BUFG                   | 2     |
+reg_config_inst/clock_20k                      | BUFG                   | 78    |
+u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT0| BUFG                   | 57    |
+CMOS_PCLK                                      | BUFGP                  | 114   |
+u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT3| BUFG                   | 1006  |
+-----------------------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 157.066ns (Maximum Frequency: 6.367MHz)
+   Minimum input arrival time before clock: 4.652ns
+   Maximum output required time after clock: 8.670ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT1'
+  Clock period: 9.318ns (frequency: 107.319MHz)
+  Total number of paths / destination ports: 11209 / 1178
+-------------------------------------------------------------------------
+Delay:               4.659ns (Levels of Logic = 2)
+  Source:            u_sdram_vga_top/u_sdbank_switch/rd_bank_1 (FF)
+  Destination:       u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/sdram_rdaddr_21 (FF)
+  Source Clock:      u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT1 falling
+  Destination Clock: u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT1 rising
+
+  Data Path: u_sdram_vga_top/u_sdbank_switch/rd_bank_1 to u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/sdram_rdaddr_21
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE_1:C->Q           3   0.525   1.196  u_sdram_vga_top/u_sdbank_switch/rd_bank_1 (u_sdram_vga_top/u_sdbank_switch/rd_bank_1)
+     LUT5:I0->O            2   0.254   1.002  u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/sdram_rdaddr[21]_INV_1058_o21 (u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/sdram_rdaddr[21]_INV_1058_o)
+     LUT6:I2->O           14   0.254   1.126  u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/_n0106_inv1 (u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/_n0106_inv)
+     FDCE:CE                   0.302          u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/sdram_rdaddr_8
+    ----------------------------------------
+    Total                      4.659ns (1.335ns logic, 3.324ns route)
+                                       (28.7% logic, 71.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'reg_config_inst/clock_20k'
+  Clock period: 6.774ns (frequency: 147.627MHz)
+  Total number of paths / destination ports: 2010 / 151
+-------------------------------------------------------------------------
+Delay:               6.774ns (Levels of Logic = 3)
+  Source:            reg_config_inst/reg_index_3 (FF)
+  Destination:       reg_config_inst/i2c_data_22 (FF)
+  Source Clock:      reg_config_inst/clock_20k rising
+  Destination Clock: reg_config_inst/clock_20k rising
+
+  Data Path: reg_config_inst/reg_index_3 to reg_config_inst/i2c_data_22
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            84   0.525   2.313  reg_config_inst/reg_index_3 (reg_config_inst/reg_index_3)
+     LUT4:I1->O            1   0.235   0.682  reg_config_inst/reg_index[8]_GND_32_o_LessThan_22_o1_SW0 (N14)
+     LUT6:I5->O            6   0.254   0.876  reg_config_inst/reg_index[8]_GND_32_o_LessThan_22_o1 (reg_config_inst/reg_index[8]_GND_32_o_LessThan_22_o)
+     LUT6:I5->O           22   0.254   1.333  reg_config_inst/_n0994_inv1 (reg_config_inst/_n0994_inv)
+     FDE:CE                    0.302          reg_config_inst/i2c_data_0
+    ----------------------------------------
+    Total                      6.774ns (1.570ns logic, 5.204ns route)
+                                       (23.2% logic, 76.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT0'
+  Clock period: 6.823ns (frequency: 146.574MHz)
+  Total number of paths / destination ports: 3678 / 147
+-------------------------------------------------------------------------
+Delay:               6.823ns (Levels of Logic = 20)
+  Source:            reg_config_inst/clock_20k_cnt_7 (FF)
+  Destination:       reg_config_inst/clock_20k_cnt_15 (FF)
+  Source Clock:      u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT0 rising
+  Destination Clock: u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT0 rising
+
+  Data Path: reg_config_inst/clock_20k_cnt_7 to reg_config_inst/clock_20k_cnt_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.525   1.181  reg_config_inst/clock_20k_cnt_7 (reg_config_inst/clock_20k_cnt_7)
+     LUT6:I0->O            1   0.254   0.790  reg_config_inst/clock_20k_cnt[15]_GND_32_o_LessThan_1_o_inv1_inv21 (reg_config_inst/clock_20k_cnt[15]_GND_32_o_LessThan_1_o_inv1_inv2)
+     LUT6:I4->O            2   0.250   1.181  reg_config_inst/clock_20k_cnt[15]_GND_32_o_LessThan_1_o_inv1_inv22 (reg_config_inst/clock_20k_cnt[15]_GND_32_o_LessThan_1_o_inv1_inv21)
+     LUT6:I0->O           17   0.254   1.317  reg_config_inst/clock_20k_cnt[15]_GND_32_o_LessThan_1_o_inv1_inv23 (reg_config_inst/clock_20k_cnt[15]_GND_32_o_LessThan_1_o_inv1_inv)
+     LUT2:I0->O            1   0.250   0.000  reg_config_inst/Mcount_clock_20k_cnt_lut<0> (reg_config_inst/Mcount_clock_20k_cnt_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  reg_config_inst/Mcount_clock_20k_cnt_cy<0> (reg_config_inst/Mcount_clock_20k_cnt_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  reg_config_inst/Mcount_clock_20k_cnt_cy<1> (reg_config_inst/Mcount_clock_20k_cnt_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  reg_config_inst/Mcount_clock_20k_cnt_cy<2> (reg_config_inst/Mcount_clock_20k_cnt_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  reg_config_inst/Mcount_clock_20k_cnt_cy<3> (reg_config_inst/Mcount_clock_20k_cnt_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  reg_config_inst/Mcount_clock_20k_cnt_cy<4> (reg_config_inst/Mcount_clock_20k_cnt_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  reg_config_inst/Mcount_clock_20k_cnt_cy<5> (reg_config_inst/Mcount_clock_20k_cnt_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  reg_config_inst/Mcount_clock_20k_cnt_cy<6> (reg_config_inst/Mcount_clock_20k_cnt_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  reg_config_inst/Mcount_clock_20k_cnt_cy<7> (reg_config_inst/Mcount_clock_20k_cnt_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  reg_config_inst/Mcount_clock_20k_cnt_cy<8> (reg_config_inst/Mcount_clock_20k_cnt_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  reg_config_inst/Mcount_clock_20k_cnt_cy<9> (reg_config_inst/Mcount_clock_20k_cnt_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  reg_config_inst/Mcount_clock_20k_cnt_cy<10> (reg_config_inst/Mcount_clock_20k_cnt_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  reg_config_inst/Mcount_clock_20k_cnt_cy<11> (reg_config_inst/Mcount_clock_20k_cnt_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  reg_config_inst/Mcount_clock_20k_cnt_cy<12> (reg_config_inst/Mcount_clock_20k_cnt_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  reg_config_inst/Mcount_clock_20k_cnt_cy<13> (reg_config_inst/Mcount_clock_20k_cnt_cy<13>)
+     MUXCY:CI->O           0   0.023   0.000  reg_config_inst/Mcount_clock_20k_cnt_cy<14> (reg_config_inst/Mcount_clock_20k_cnt_cy<14>)
+     XORCY:CI->O           1   0.206   0.000  reg_config_inst/Mcount_clock_20k_cnt_xor<15> (reg_config_inst/Mcount_clock_20k_cnt15)
+     FDC:D                     0.074          reg_config_inst/clock_20k_cnt_15
+    ----------------------------------------
+    Total                      6.823ns (2.354ns logic, 4.469ns route)
+                                       (34.5% logic, 65.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CMOS_PCLK'
+  Clock period: 3.455ns (frequency: 289.436MHz)
+  Total number of paths / destination ports: 558 / 238
+-------------------------------------------------------------------------
+Delay:               3.455ns (Levels of Logic = 7)
+  Source:            u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_1 (FF)
+  Destination:       u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i (FF)
+  Source Clock:      CMOS_PCLK rising
+  Destination Clock: CMOS_PCLK rising
+
+  Data Path: u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_1 to u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_wrfifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.525   1.042  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin<1>)
+     LUT4:I0->O            1   0.254   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c1/v1<0>1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c1/v1<0>)
+     MUXCY:S->O            1   0.215   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c1/gmux.gm[0].gm1.m1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c1/gmux.carrynet<0>)
+     MUXCY:CI->O           1   0.023   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c1/gmux.gm[1].gms.ms (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c1/gmux.carrynet<1>)
+     MUXCY:CI->O           1   0.023   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c1/gmux.gm[2].gms.ms (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c1/gmux.carrynet<2>)
+     MUXCY:CI->O           1   0.023   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c1/gmux.gm[3].gms.ms (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c1/gmux.carrynet<3>)
+     MUXCY:CI->O           1   0.235   0.790  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c1/gmux.gm[4].gms.ms (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/comp1)
+     LUT5:I3->O            2   0.250   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_comp1_GND_196_o_MUX_13_o11 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/comp1_GND_196_o_MUX_13_o)
+     FDP:D                     0.074          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i
+    ----------------------------------------
+    Total                      3.455ns (1.623ns logic, 1.832ns route)
+                                       (47.0% logic, 53.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT3'
+  Clock period: 157.066ns (frequency: 6.367MHz)
+  Total number of paths / destination ports: 50831282364451083000000000000000 / 2332
+-------------------------------------------------------------------------
+Delay:               78.533ns (Levels of Logic = 186)
+  Source:            u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/dout_i_1 (FF)
+  Destination:       top/RGB1_23 (FF)
+  Source Clock:      u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT3 falling
+  Destination Clock: u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT3 rising
+
+  Data Path: u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/dout_i_1 to top/RGB1_23
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.525   0.682  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/dout_i_1 (dout<1>)
+     end scope: 'u_sdram_vga_top/u_sdram_2fifo_top/u_dcfifo_ctrl/u_rdfifo:dout<1>'
+     LUT3:I2->O            5   0.254   1.069  u_sdram_vga_top/u_lcd_top/u_lcd_driver/Mmux_lcd_rgb81 (lcd_red<1>)
+     LUT3:I0->O            1   0.235   0.682  top/cr/ADDERTREE_INTERNAL_Madd24 (top/cr/ADDERTREE_INTERNAL_Madd21)
+     LUT4:I3->O            1   0.254   0.000  top/cr/ADDERTREE_INTERNAL_Madd2_lut<0>2 (top/cr/ADDERTREE_INTERNAL_Madd2_lut<0>2)
+     MUXCY:S->O            1   0.215   0.000  top/cr/ADDERTREE_INTERNAL_Madd2_cy<0>_1 (top/cr/ADDERTREE_INTERNAL_Madd2_cy<0>2)
+     XORCY:CI->O           2   0.206   0.954  top/cr/ADDERTREE_INTERNAL_Madd2_xor<0>_2 (top/cr/ADDERTREE_INTERNAL_Madd_32)
+     LUT3:I0->O            1   0.235   0.682  top/cr/ADDERTREE_INTERNAL_Madd113 (top/cr/ADDERTREE_INTERNAL_Madd113)
+     LUT4:I3->O            1   0.254   0.000  top/cr/ADDERTREE_INTERNAL_Madd11_lut<0>4 (top/cr/ADDERTREE_INTERNAL_Madd11_lut<0>4)
+     MUXCY:S->O            1   0.215   0.000  top/cr/ADDERTREE_INTERNAL_Madd11_cy<0>_3 (top/cr/ADDERTREE_INTERNAL_Madd11_cy<0>4)
+     XORCY:CI->O           1   0.206   0.682  top/cr/ADDERTREE_INTERNAL_Madd11_xor<0>_4 (top/cr/ADDERTREE_INTERNAL_Madd_511)
+     LUT2:I1->O            1   0.254   0.000  top/cr/ADDERTREE_INTERNAL_Madd23_lut<5> (top/cr/ADDERTREE_INTERNAL_Madd23_lut<5>)
+     MUXCY:S->O            1   0.215   0.000  top/cr/ADDERTREE_INTERNAL_Madd23_cy<5> (top/cr/ADDERTREE_INTERNAL_Madd23_cy<5>)
+     XORCY:CI->O          57   0.206   2.305  top/cr/ADDERTREE_INTERNAL_Madd23_xor<6> (top/cr/ADDERTREE_INTERNAL_Madd_623)
+     LUT5:I0->O            1   0.254   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0002_INV_817_o_lut<0> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0002_INV_817_o_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0002_INV_817_o_cy<0> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0002_INV_817_o_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0002_INV_817_o_cy<1> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0002_INV_817_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0002_INV_817_o_cy<2> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0002_INV_817_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0002_INV_817_o_cy<3> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0002_INV_817_o_cy<3>)
+     MUXCY:CI->O           6   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0002_INV_817_o_cy<4> (top/cr/n0069[17:0]<16>)
+     MUXCY:CI->O           2   0.235   1.002  top/cr/GND_9_o_filter[31]_div_25/Mmux_a[16]_GND_21_o_MUX_262_o11_cy (top/cr/GND_9_o_filter[31]_div_25/a[16]_GND_21_o_MUX_262_o)
+     LUT5:I1->O            0   0.254   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0003_INV_816_o_lutdi (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0003_INV_816_o_lutdi)
+     MUXCY:DI->O           1   0.181   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0003_INV_816_o_cy<0> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0003_INV_816_o_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0003_INV_816_o_cy<1> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0003_INV_816_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0003_INV_816_o_cy<2> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0003_INV_816_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0003_INV_816_o_cy<3> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0003_INV_816_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0003_INV_816_o_cy<4> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0003_INV_816_o_cy<4>)
+     MUXCY:CI->O          10   0.235   1.008  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0003_INV_816_o_cy<5> (top/cr/n0069[17:0]<15>)
+     LUT3:I2->O            5   0.254   1.117  top/cr/GND_9_o_filter[31]_div_25/Mmux_a[16]_GND_21_o_MUX_356_o111 (top/cr/GND_9_o_filter[31]_div_25/a[16]_GND_21_o_MUX_357_o)
+     LUT4:I0->O            0   0.254   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0004_INV_815_o_lutdi (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0004_INV_815_o_lutdi)
+     MUXCY:DI->O           1   0.181   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0004_INV_815_o_cy<0> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0004_INV_815_o_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0004_INV_815_o_cy<1> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0004_INV_815_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0004_INV_815_o_cy<2> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0004_INV_815_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0004_INV_815_o_cy<3> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0004_INV_815_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0004_INV_815_o_cy<4> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0004_INV_815_o_cy<4>)
+     MUXCY:CI->O          12   0.235   1.069  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0004_INV_815_o_cy<5> (top/cr/n0069[17:0]<14>)
+     LUT6:I5->O            4   0.254   1.080  top/cr/GND_9_o_filter[31]_div_25/Mmux_a[16]_GND_21_o_MUX_448_o111 (top/cr/GND_9_o_filter[31]_div_25/a[16]_GND_21_o_MUX_449_o)
+     LUT5:I1->O            1   0.254   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0005_INV_814_o_lut<1> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0005_INV_814_o_lut<1>)
+     MUXCY:S->O            1   0.215   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0005_INV_814_o_cy<1> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0005_INV_814_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0005_INV_814_o_cy<2> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0005_INV_814_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0005_INV_814_o_cy<3> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0005_INV_814_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0005_INV_814_o_cy<4> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0005_INV_814_o_cy<4>)
+     MUXCY:CI->O          13   0.235   1.098  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0005_INV_814_o_cy<5> (top/cr/n0069[17:0]<13>)
+     LUT6:I5->O            8   0.254   1.172  top/cr/GND_9_o_filter[31]_div_25/Mmux_a[16]_GND_21_o_MUX_538_o121 (top/cr/GND_9_o_filter[31]_div_25/a[16]_GND_21_o_MUX_540_o)
+     LUT4:I1->O            1   0.235   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0006_INV_813_o_lut<1> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0006_INV_813_o_lut<1>)
+     MUXCY:S->O            1   0.215   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0006_INV_813_o_cy<1> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0006_INV_813_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0006_INV_813_o_cy<2> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0006_INV_813_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0006_INV_813_o_cy<3> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0006_INV_813_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0006_INV_813_o_cy<4> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0006_INV_813_o_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0006_INV_813_o_cy<5> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0006_INV_813_o_cy<5>)
+     MUXCY:CI->O          18   0.235   1.235  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0006_INV_813_o_cy<6> (top/cr/n0069[17:0]<12>)
+     LUT6:I5->O            6   0.254   1.152  top/cr/GND_9_o_filter[31]_div_25/Mmux_a[16]_GND_21_o_MUX_626_o111 (top/cr/GND_9_o_filter[31]_div_25/a[16]_GND_21_o_MUX_627_o)
+     LUT5:I1->O            1   0.254   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0007_INV_812_o_lut<2> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0007_INV_812_o_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0007_INV_812_o_cy<2> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0007_INV_812_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0007_INV_812_o_cy<3> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0007_INV_812_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0007_INV_812_o_cy<4> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0007_INV_812_o_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0007_INV_812_o_cy<5> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0007_INV_812_o_cy<5>)
+     MUXCY:CI->O          25   0.235   1.403  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0007_INV_812_o_cy<6> (top/cr/n0069[17:0]<11>)
+     LUT3:I2->O            2   0.254   1.002  top/cr/GND_9_o_filter[31]_div_25/Mmux_a[16]_GND_21_o_MUX_712_o151 (top/cr/GND_9_o_filter[31]_div_25/a[16]_GND_21_o_MUX_717_o)
+     LUT4:I0->O            0   0.254   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0008_INV_811_o_lutdi (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0008_INV_811_o_lutdi)
+     MUXCY:DI->O           1   0.181   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0008_INV_811_o_cy<0> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0008_INV_811_o_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0008_INV_811_o_cy<1> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0008_INV_811_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0008_INV_811_o_cy<2> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0008_INV_811_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0008_INV_811_o_cy<3> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0008_INV_811_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0008_INV_811_o_cy<4> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0008_INV_811_o_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0008_INV_811_o_cy<5> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0008_INV_811_o_cy<5>)
+     MUXCY:CI->O          22   0.023   1.334  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0008_INV_811_o_cy<6> (top/cr/n0069[17:0]<10>)
+     LUT5:I4->O            6   0.254   1.152  top/cr/GND_9_o_filter[31]_div_25/Mmux_a[16]_GND_21_o_MUX_796_o141 (top/cr/GND_9_o_filter[31]_div_25/a[16]_GND_21_o_MUX_800_o)
+     LUT4:I0->O            0   0.254   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0009_INV_810_o_lutdi1 (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0009_INV_810_o_lutdi1)
+     MUXCY:DI->O           1   0.181   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0009_INV_810_o_cy<1> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0009_INV_810_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0009_INV_810_o_cy<2> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0009_INV_810_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0009_INV_810_o_cy<3> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0009_INV_810_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0009_INV_810_o_cy<4> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0009_INV_810_o_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0009_INV_810_o_cy<5> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0009_INV_810_o_cy<5>)
+     MUXCY:CI->O          34   0.023   1.553  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0009_INV_810_o_cy<6> (top/cr/n0069[17:0]<9>)
+     LUT3:I2->O            2   0.254   1.002  top/cr/GND_9_o_filter[31]_div_25/Mmux_a[16]_GND_21_o_MUX_878_o151 (top/cr/GND_9_o_filter[31]_div_25/a[16]_GND_21_o_MUX_883_o)
+     LUT4:I0->O            0   0.254   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0010_INV_809_o_lutdi1 (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0010_INV_809_o_lutdi1)
+     MUXCY:DI->O           1   0.181   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0010_INV_809_o_cy<1> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0010_INV_809_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0010_INV_809_o_cy<2> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0010_INV_809_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0010_INV_809_o_cy<3> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0010_INV_809_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0010_INV_809_o_cy<4> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0010_INV_809_o_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0010_INV_809_o_cy<5> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0010_INV_809_o_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0010_INV_809_o_cy<6> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0010_INV_809_o_cy<6>)
+     MUXCY:CI->O          27   0.023   1.436  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0010_INV_809_o_cy<7> (top/cr/n0069[17:0]<8>)
+     LUT6:I5->O            6   0.254   1.152  top/cr/GND_9_o_filter[31]_div_25/Mmux_a[16]_GND_21_o_MUX_958_o161 (top/cr/GND_9_o_filter[31]_div_25/a[16]_GND_21_o_MUX_964_o)
+     LUT4:I0->O            0   0.254   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0011_INV_808_o_lutdi1 (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0011_INV_808_o_lutdi1)
+     MUXCY:DI->O           1   0.181   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0011_INV_808_o_cy<1> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0011_INV_808_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0011_INV_808_o_cy<2> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0011_INV_808_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0011_INV_808_o_cy<3> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0011_INV_808_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0011_INV_808_o_cy<4> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0011_INV_808_o_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0011_INV_808_o_cy<5> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0011_INV_808_o_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0011_INV_808_o_cy<6> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0011_INV_808_o_cy<6>)
+     MUXCY:CI->O          42   0.023   1.687  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0011_INV_808_o_cy<7> (top/cr/n0069[17:0]<7>)
+     LUT6:I5->O            2   0.254   1.002  top/cr/GND_9_o_filter[31]_div_25/Mmux_a[16]_GND_21_o_MUX_1036_o171 (top/cr/GND_9_o_filter[31]_div_25/a[16]_GND_21_o_MUX_1043_o)
+     LUT4:I0->O            0   0.254   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0012_INV_807_o_lutdi1 (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0012_INV_807_o_lutdi1)
+     MUXCY:DI->O           1   0.181   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0012_INV_807_o_cy<1> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0012_INV_807_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0012_INV_807_o_cy<2> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0012_INV_807_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0012_INV_807_o_cy<3> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0012_INV_807_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0012_INV_807_o_cy<4> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0012_INV_807_o_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0012_INV_807_o_cy<5> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0012_INV_807_o_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0012_INV_807_o_cy<6> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0012_INV_807_o_cy<6>)
+     MUXCY:CI->O          31   0.023   1.503  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0012_INV_807_o_cy<7> (top/cr/n0069[17:0]<6>)
+     LUT6:I5->O            6   0.254   1.152  top/cr/GND_9_o_filter[31]_div_25/Mmux_a[16]_GND_21_o_MUX_1112_o181 (top/cr/GND_9_o_filter[31]_div_25/a[16]_GND_21_o_MUX_1120_o)
+     LUT4:I0->O            0   0.254   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0013_INV_806_o_lutdi1 (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0013_INV_806_o_lutdi1)
+     MUXCY:DI->O           1   0.181   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0013_INV_806_o_cy<1> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0013_INV_806_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0013_INV_806_o_cy<2> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0013_INV_806_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0013_INV_806_o_cy<3> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0013_INV_806_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0013_INV_806_o_cy<4> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0013_INV_806_o_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0013_INV_806_o_cy<5> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0013_INV_806_o_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0013_INV_806_o_cy<6> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0013_INV_806_o_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0013_INV_806_o_cy<7> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0013_INV_806_o_cy<7>)
+     MUXCY:CI->O          50   0.023   1.821  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0013_INV_806_o_cy<8> (top/cr/n0069[17:0]<5>)
+     LUT6:I5->O            2   0.254   1.002  top/cr/GND_9_o_filter[31]_div_25/Mmux_a[16]_GND_21_o_MUX_1186_o191 (top/cr/GND_9_o_filter[31]_div_25/a[16]_GND_21_o_MUX_1195_o)
+     LUT4:I0->O            0   0.254   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0014_INV_805_o_lutdi1 (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0014_INV_805_o_lutdi1)
+     MUXCY:DI->O           1   0.181   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0014_INV_805_o_cy<1> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0014_INV_805_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0014_INV_805_o_cy<2> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0014_INV_805_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0014_INV_805_o_cy<3> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0014_INV_805_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0014_INV_805_o_cy<4> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0014_INV_805_o_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0014_INV_805_o_cy<5> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0014_INV_805_o_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0014_INV_805_o_cy<6> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0014_INV_805_o_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0014_INV_805_o_cy<7> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0014_INV_805_o_cy<7>)
+     MUXCY:CI->O          35   0.023   1.570  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0014_INV_805_o_cy<8> (top/cr/n0069[17:0]<4>)
+     LUT6:I5->O            6   0.254   1.152  top/cr/GND_9_o_filter[31]_div_25/Mmux_a[16]_GND_21_o_MUX_1258_o1101 (top/cr/GND_9_o_filter[31]_div_25/a[16]_GND_21_o_MUX_1268_o)
+     LUT4:I0->O            0   0.254   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0015_INV_804_o_lutdi1 (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0015_INV_804_o_lutdi1)
+     MUXCY:DI->O           1   0.181   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0015_INV_804_o_cy<1> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0015_INV_804_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0015_INV_804_o_cy<2> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0015_INV_804_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0015_INV_804_o_cy<3> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0015_INV_804_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0015_INV_804_o_cy<4> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0015_INV_804_o_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0015_INV_804_o_cy<5> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0015_INV_804_o_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0015_INV_804_o_cy<6> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0015_INV_804_o_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0015_INV_804_o_cy<7> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0015_INV_804_o_cy<7>)
+     MUXCY:CI->O          58   0.023   1.883  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0015_INV_804_o_cy<8> (top/cr/n0069[17:0]<3>)
+     LUT6:I5->O            3   0.254   1.042  top/cr/GND_9_o_filter[31]_div_25/Mmux_a[16]_GND_21_o_MUX_1328_o1111 (top/cr/GND_9_o_filter[31]_div_25/a[16]_GND_21_o_MUX_1339_o)
+     LUT4:I0->O            0   0.254   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0016_INV_803_o_lutdi1 (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0016_INV_803_o_lutdi1)
+     MUXCY:DI->O           1   0.181   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0016_INV_803_o_cy<1> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0016_INV_803_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0016_INV_803_o_cy<2> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0016_INV_803_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0016_INV_803_o_cy<3> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0016_INV_803_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0016_INV_803_o_cy<4> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0016_INV_803_o_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0016_INV_803_o_cy<5> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0016_INV_803_o_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0016_INV_803_o_cy<6> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0016_INV_803_o_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0016_INV_803_o_cy<7> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0016_INV_803_o_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0016_INV_803_o_cy<8> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0016_INV_803_o_cy<8>)
+     MUXCY:CI->O          48   0.023   1.788  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0016_INV_803_o_cy<9> (top/cr/n0069[17:0]<2>)
+     LUT6:I5->O            2   0.254   1.002  top/cr/GND_9_o_filter[31]_div_25/Mmux_a[16]_GND_21_o_MUX_1396_o1121 (top/cr/GND_9_o_filter[31]_div_25/a[16]_GND_21_o_MUX_1408_o)
+     LUT4:I0->O            0   0.254   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0017_INV_802_o_lutdi1 (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0017_INV_802_o_lutdi1)
+     MUXCY:DI->O           1   0.181   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0017_INV_802_o_cy<1> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0017_INV_802_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0017_INV_802_o_cy<2> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0017_INV_802_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0017_INV_802_o_cy<3> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0017_INV_802_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0017_INV_802_o_cy<4> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0017_INV_802_o_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0017_INV_802_o_cy<5> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0017_INV_802_o_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0017_INV_802_o_cy<6> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0017_INV_802_o_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0017_INV_802_o_cy<7> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0017_INV_802_o_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0017_INV_802_o_cy<8> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0017_INV_802_o_cy<8>)
+     MUXCY:CI->O          19   0.023   1.261  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0017_INV_802_o_cy<9> (top/cr/n0069[17:0]<1>)
+     LUT6:I5->O            2   0.254   1.002  top/cr/GND_9_o_filter[31]_div_25/Mmux_a[16]_GND_21_o_MUX_1462_o1131 (top/cr/GND_9_o_filter[31]_div_25/a[16]_GND_21_o_MUX_1475_o)
+     LUT4:I0->O            0   0.254   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0018_INV_801_o_lutdi1 (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0018_INV_801_o_lutdi1)
+     MUXCY:DI->O           1   0.181   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0018_INV_801_o_cy<1> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0018_INV_801_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0018_INV_801_o_cy<2> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0018_INV_801_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0018_INV_801_o_cy<3> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0018_INV_801_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0018_INV_801_o_cy<4> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0018_INV_801_o_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0018_INV_801_o_cy<5> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0018_INV_801_o_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0018_INV_801_o_cy<6> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0018_INV_801_o_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0018_INV_801_o_cy<7> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0018_INV_801_o_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0018_INV_801_o_cy<8> (top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0018_INV_801_o_cy<8>)
+     MUXCY:CI->O           1   0.235   0.682  top/cr/GND_9_o_filter[31]_div_25/Mcompar_BUS_0018_INV_801_o_cy<9> (top/cr/n0069[17:0]<0>)
+     LUT1:I0->O            1   0.254   0.000  top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<0>_rt (top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<0>_rt)
+     MUXCY:S->O            1   0.215   0.000  top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<0> (top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<1> (top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<2> (top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<3> (top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<4> (top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<5> (top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<6> (top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<7> (top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<8> (top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<9> (top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<10> (top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<11> (top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<12> (top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<13> (top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<14> (top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<15> (top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_cy<15>)
+     XORCY:CI->O           1   0.206   0.682  top/cr/Msub_quantify[31]_GND_9_o_sub_28_OUT<31:0>_xor<16> (top/cr/quantify[31]_GND_9_o_sub_28_OUT<16>)
+     LUT3:I2->O            1   0.254   0.681  top/cr/Mmux_mult81 (top/cr/mult<16>)
+     DSP48A1:A16->P47     18   5.220   1.234  top/cr/Mmult_n0097 (top/cr/Mmult_n0097_P47_to_Mmult_n00971)
+     DSP48A1:C30->P14      8   3.141   0.944  top/cr/Mmult_n00971 (top/cr/n0097<31>)
+     LUT6:I5->O            1   0.254   0.000  top/cr/Mmux_y11 (top/R1<0>)
+     FDE:D                     0.074          top/RGB1_16
+    ----------------------------------------
+    Total                     78.533ns (28.418ns logic, 50.115ns route)
+                                       (36.2% logic, 63.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT1'
+  Total number of paths / destination ports: 27 / 27
+-------------------------------------------------------------------------
+Offset:              3.761ns (Levels of Logic = 2)
+  Source:            rst_n (PAD)
+  Destination:       u_system_ctrl/delay_done (FF)
+  Destination Clock: u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT1 rising
+
+  Data Path: rst_n to u_system_ctrl/delay_done
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.681  rst_n_IBUF (rst_n_IBUF)
+     INV:I->O             11   0.255   1.038  rst_n_inv1_INV_0 (rst_n_inv)
+     FDCE:CLR                  0.459          u_system_ctrl/delay_cnt_0
+    ----------------------------------------
+    Total                      3.761ns (2.042ns logic, 1.719ns route)
+                                       (54.3% logic, 45.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'reg_config_inst/clock_20k'
+  Total number of paths / destination ports: 336 / 64
+-------------------------------------------------------------------------
+Offset:              4.652ns (Levels of Logic = 2)
+  Source:            KEY1 (PAD)
+  Destination:       reg_config_inst/off_counter_15 (FF)
+  Destination Clock: reg_config_inst/clock_20k rising
+
+  Data Path: KEY1 to reg_config_inst/off_counter_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            36   1.328   1.587  KEY1_IBUF (KEY1_IBUF)
+     LUT5:I4->O           16   0.254   1.181  reg_config_inst/_n0960_inv2 (reg_config_inst/_n0960_inv)
+     FDCE:CE                   0.302          reg_config_inst/off_counter_0
+    ----------------------------------------
+    Total                      4.652ns (1.884ns logic, 2.768ns route)
+                                       (40.5% logic, 59.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CMOS_PCLK'
+  Total number of paths / destination ports: 89 / 48
+-------------------------------------------------------------------------
+Offset:              4.324ns (Levels of Logic = 2)
+  Source:            CMOS_VSYNC (PAD)
+  Destination:       u_CMOS_Capture/CMOS_oDATA_15 (FF)
+  Destination Clock: CMOS_PCLK rising
+
+  Data Path: CMOS_VSYNC to u_CMOS_Capture/CMOS_oDATA_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            15   1.328   1.263  CMOS_VSYNC_IBUF (CMOS_VSYNC_IBUF)
+     LUT3:I1->O           16   0.250   1.181  u_CMOS_Capture/Mcount_byte_state_lut<0>1 (u_CMOS_Capture/Mcount_byte_state_lut<0>)
+     FDCE:CE                   0.302          u_CMOS_Capture/CMOS_oDATA_0
+    ----------------------------------------
+    Total                      4.324ns (1.880ns logic, 2.444ns route)
+                                       (43.5% logic, 56.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT1'
+  Total number of paths / destination ports: 51 / 35
+-------------------------------------------------------------------------
+Offset:              5.554ns (Levels of Logic = 2)
+  Source:            u_sdram_vga_top/u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dlink (FF)
+  Destination:       S_DB<15> (PAD)
+  Source Clock:      u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT1 rising
+
+  Data Path: u_sdram_vga_top/u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dlink to S_DB<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.525   0.681  u_sdram_vga_top/u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dlink (u_sdram_vga_top/u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dlink)
+     INV:I->O             16   0.255   1.181  u_sdram_vga_top/u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dlink_inv1_INV_0 (u_sdram_vga_top/u_sdram_2fifo_top/u_sdramtop/module_003/sdr_dlink_inv)
+     IOBUF:T->IO               2.912          S_DB_15_IOBUF (S_DB<15>)
+    ----------------------------------------
+    Total                      5.554ns (3.692ns logic, 1.862ns route)
+                                       (66.5% logic, 33.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT3'
+  Total number of paths / destination ports: 76 / 27
+-------------------------------------------------------------------------
+Offset:              8.670ns (Levels of Logic = 5)
+  Source:            u_sdram_vga_top/u_lcd_top/u_lcd_driver/vcnt_2 (FF)
+  Destination:       lcd_out_de (PAD)
+  Source Clock:      u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT3 rising
+
+  Data Path: u_sdram_vga_top/u_lcd_top/u_lcd_driver/vcnt_2 to lcd_out_de
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             4   0.525   0.912  u_sdram_vga_top/u_lcd_top/u_lcd_driver/vcnt_2 (u_sdram_vga_top/u_lcd_top/u_lcd_driver/vcnt_2)
+     LUT2:I0->O            1   0.250   0.682  u_sdram_vga_top/u_lcd_top/u_lcd_driver/Mmux_lcd_xpos65_SW0 (N72)
+     LUT6:I5->O           35   0.254   2.025  u_sdram_vga_top/u_lcd_top/u_lcd_driver/Mmux_lcd_xpos65 (u_sdram_vga_top/u_lcd_top/u_lcd_driver/Mmux_lcd_xpos65)
+     LUT6:I0->O            1   0.254   0.000  u_sdram_vga_top/u_lcd_top/u_lcd_driver/lcd_en4_G (N286)
+     MUXF7:I1->O           1   0.175   0.681  u_sdram_vga_top/u_lcd_top/u_lcd_driver/lcd_en4 (lcd_out_de_OBUF)
+     OBUF:I->O                 2.912          lcd_out_de_OBUF (lcd_out_de)
+    ----------------------------------------
+    Total                      8.670ns (4.370ns logic, 4.300ns route)
+                                       (50.4% logic, 49.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              5.553ns (Levels of Logic = 2)
+  Source:            reg_config_inst/clock_20k (FF)
+  Destination:       CMOS_SCLK (PAD)
+  Source Clock:      u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT0 rising
+
+  Data Path: reg_config_inst/clock_20k to CMOS_SCLK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.525   1.181  reg_config_inst/clock_20k (reg_config_inst/clock_20k)
+     LUT6:I0->O            1   0.254   0.681  reg_config_inst/u1/_n03921 (CMOS_SCLK_OBUF)
+     OBUF:I->O                 2.912          CMOS_SCLK_OBUF (CMOS_SCLK)
+    ----------------------------------------
+    Total                      5.553ns (3.691ns logic, 1.862ns route)
+                                       (66.5% logic, 33.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'reg_config_inst/clock_20k'
+  Total number of paths / destination ports: 6 / 2
+-------------------------------------------------------------------------
+Offset:              5.857ns (Levels of Logic = 2)
+  Source:            reg_config_inst/u1/cyc_count_2 (FF)
+  Destination:       CMOS_SCLK (PAD)
+  Source Clock:      reg_config_inst/clock_20k rising
+
+  Data Path: reg_config_inst/u1/cyc_count_2 to CMOS_SCLK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q            17   0.525   1.485  reg_config_inst/u1/cyc_count_2 (reg_config_inst/u1/cyc_count_2)
+     LUT6:I2->O            1   0.254   0.681  reg_config_inst/u1/_n03921 (CMOS_SCLK_OBUF)
+     OBUF:I->O                 2.912          CMOS_SCLK_OBUF (CMOS_SCLK)
+    ----------------------------------------
+    Total                      5.857ns (3.691ns logic, 2.166ns route)
+                                       (63.0% logic, 37.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CMOS_PCLK
+-----------------------------------------------+---------+---------+---------+---------+
+                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------------------+---------+---------+---------+---------+
+CMOS_PCLK                                      |    3.455|         |         |         |
+reg_config_inst/clock_20k                      |    3.395|         |         |         |
+u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT1|    4.636|         |         |         |
+-----------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock reg_config_inst/clock_20k
+-----------------------------------------------+---------+---------+---------+---------+
+                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------------------+---------+---------+---------+---------+
+reg_config_inst/clock_20k                      |    6.774|         |         |         |
+u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT0|    4.165|         |         |         |
+-----------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT0
+-----------------------------------------------+---------+---------+---------+---------+
+                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------------------+---------+---------+---------+---------+
+u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT0|    6.823|         |         |         |
+u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT1|    1.859|         |         |         |
+-----------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT1
+-----------------------------------------------+---------+---------+---------+---------+
+                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------------------+---------+---------+---------+---------+
+CMOS_PCLK                                      |    1.280|         |         |         |
+u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT1|    8.463|    4.659|    4.532|         |
+u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT3|         |    3.141|    2.802|         |
+-----------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT3
+-----------------------------------------------+---------+---------+---------+---------+
+                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------------------+---------+---------+---------+---------+
+u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT1|    4.532|         |    3.583|         |
+u_system_ctrl/u_sdram_pll/pll_base_inst/CLKOUT3|   83.370|   78.533|    7.976|         |
+-----------------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 26.00 secs
+Total CPU time to Xst completion: 25.44 secs
+ 
+--> 
+
+Total memory usage is 312372 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  134 (   0 filtered)
+Number of infos    :  120 (   0 filtered)
+

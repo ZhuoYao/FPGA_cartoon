@@ -1,0 +1,12 @@
+set -loop_iteration_limit 1000
+run
+-ifn sdram_ov5640_lcd.prj
+-top sdram_ov5640_lcd
+-p xc6slx9ftg256-2
+-ofn sdram_ov5640_lcd.ngc
+-vlgincdir {D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/lcd_ip D:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/rtl/sdram_vga_ip/sdram_ip}
+-sd {d:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/ipcore_dir d:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/ip/fifo_generator_v9_3_0 d:/Projects/FPGA/cartoon/26_sdram_ov5640_lcd/sdram_ov5640_lcd/cartoon/cartoon.srcs/sources_1/ip/fifo_generator_v9_3_1}
+-opt_mode speed
+-opt_level 1
+-lc auto
+-bufg 16
